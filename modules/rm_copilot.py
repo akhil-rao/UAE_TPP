@@ -5,7 +5,6 @@ import random
 def run_rm_copilot():
     st.header("🧠 RM Copilot Chatbot (Simulated)")
 
-    # Load clients
     with open("data/clients.json") as f:
         clients = json.load(f)
 
@@ -31,7 +30,6 @@ def run_rm_copilot():
     if user_input:
         st.session_state.chat_history.append({"role": "user", "content": user_input})
 
-        # Simulated GPT-style logic
         def simulate_response(profile, query):
             actions = random.sample([
                 "Recommend Life Insurance",
@@ -42,14 +40,7 @@ def run_rm_copilot():
                 "Invite to Wealth Seminar"
             ], 3)
             pitch = f"Hi {profile['name'].split()[0]}, based on your profile, I’d recommend our new {actions[0]} offering this month."
-
-            return f"Suggested Actions:
-- {actions[0]}
-- {actions[1]}
-- {actions[2]}
-
-WhatsApp Pitch:
-"{pitch}""
+            return f"Suggested Actions:\\n- {actions[0]}\\n- {actions[1]}\\n- {actions[2]}\\n\\nWhatsApp Pitch:\\n\\\"{pitch}\\\""
 
         reply = simulate_response(selected_client, user_input)
         st.session_state.chat_history.append({"role": "assistant", "content": reply})
