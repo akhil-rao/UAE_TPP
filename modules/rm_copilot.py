@@ -1,27 +1,61 @@
 import streamlit as st
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
+import json
+import random
 
 def run_rm_copilot():
-    st.header("🧠 RM / Advisor Copilot")
+    st.header("🧠 RM Copilot Chatbot (Simulated)")
 
-    st.subheader("Client Radar View")
-    radar_df = pd.read_csv("data/client_radar.csv")
-    categories = radar_df["category"]
-    values = radar_df["value"].tolist()
-    values += values[:1]
+    # Load clients
+    with open("data/clients.json") as f:
+        clients = json.load(f)
 
-    angles = [n / float(len(categories)) * 2 * np.pi for n in range(len(categories))]
-    angles += angles[:1]
+    client_names = [client["name"] for client in clients]
+    selected_name = st.selectbox("Select a Client", client_names)
 
-    fig, ax = plt.subplots(figsize=(6,6), subplot_kw=dict(polar=True))
-    ax.plot(angles, values)
-    ax.fill(angles, values, alpha=0.3)
-    ax.set_xticks(angles[:-1])
-    ax.set_xticklabels(categories)
-    st.pyplot(fig)
+    selected_client = next((c for c in clients if c["name"] == selected_name), None)
 
-    st.subheader("Pitch Coach")
-    if st.button("Generate Pitch"):
-        st.success("Hi Fatima, based on your travel pattern, our new Elite Travel Card could save you AED 700/year.")
+    st.subheader("Client Profile")
+    st.write(f"**Income:** AED {selected_client['monthly_income']:,}")
+    st.write(f"**Segment:** {selected_client['segment']}")
+    st.write(f"**Products:** {', '.join(selected_client['products'])}")
+    st.write(f"**Risk Score:** {selected_client['risk_score']}")
+
+    st.divider()
+    st.subheader("💬 Chat with RM Copilot")
+
+    if "chat_history" not in st.session_state:
+        st.session_state.chat_history = []
+
+    user_input = st.chat_input("Ask anything about this client...")
+
+    if user_input:
+        st.session_state.chat_history.append({"role": "user", "content": user_input})
+
+        # Simulated GPT-style logic
+        def simulate_response(profile, query):
+            actions = random.sample([
+                "Recommend Life Insurance",
+                "Offer Elite Travel Credit Card",
+                "Suggest Investment Plan",
+                "Cross-sell Home Insurance",
+                "Propose Salary Advance",
+                "Invite to Wealth Seminar"
+            ], 3)
+            pitch = f"Hi {profile['name'].split()[0]}, based on your profile, I’d recommend our new {actions[0]} offering this month."
+
+            return f"Suggested Actions:
+- {actions[0]}
+- {actions[1]}
+- {actions[2]}
+
+WhatsApp Pitch:
+"{pitch}""
+
+        reply = simulate_response(selected_client, user_input)
+        st.session_state.chat_history.append({"role": "assistant", "content": reply})
+
+    for msg in st.session_state.chat_history:
+        if msg["role"] == "user":
+            st.chat_message("user").write(msg["content"])
+        else:
+            st.chat_message("assistant").write(msg["content"])
