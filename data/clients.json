@@ -1,0 +1,613 @@
+[
+  {
+    "name": "Allison Hill",
+    "monthly_income": 22592,
+    "products": [
+      "Investment"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Noah Rhodes",
+    "monthly_income": 37256,
+    "products": [
+      "Investment",
+      "Credit Card"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "High"
+  },
+  {
+    "name": "Angie Henderson",
+    "monthly_income": 79482,
+    "products": [
+      "Insurance"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Daniel Wagner",
+    "monthly_income": 11905,
+    "products": [
+      "Remittance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Cristian Santos",
+    "monthly_income": 11478,
+    "products": [
+      "Investment",
+      "Insurance"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Connie Lawrence",
+    "monthly_income": 66878,
+    "products": [
+      "Credit Card",
+      "Remittance",
+      "Mortgage"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Abigail Shaffer",
+    "monthly_income": 28379,
+    "products": [
+      "Savings",
+      "Credit Card"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Gina Moore",
+    "monthly_income": 20676,
+    "products": [
+      "Savings",
+      "Insurance",
+      "Investment"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Gabrielle Davis",
+    "monthly_income": 68217,
+    "products": [
+      "Mortgage"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Ryan Munoz",
+    "monthly_income": 46427,
+    "products": [
+      "Insurance",
+      "Remittance",
+      "Credit Card"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Monica Herrera",
+    "monthly_income": 37871,
+    "products": [
+      "Credit Card",
+      "Remittance",
+      "Investment"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Jamie Arnold",
+    "monthly_income": 67429,
+    "products": [
+      "Remittance",
+      "Savings",
+      "Insurance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Lisa Hensley",
+    "monthly_income": 42993,
+    "products": [
+      "Insurance"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Michele Williams",
+    "monthly_income": 78010,
+    "products": [
+      "Remittance",
+      "Mortgage"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Dylan Miller",
+    "monthly_income": 81000,
+    "products": [
+      "Investment",
+      "Savings"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Brian Ramirez",
+    "monthly_income": 12207,
+    "products": [
+      "Mortgage",
+      "Savings",
+      "Credit Card"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Holly Wood",
+    "monthly_income": 49245,
+    "products": [
+      "Investment",
+      "Mortgage"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Derek Zuniga",
+    "monthly_income": 68142,
+    "products": [
+      "Savings",
+      "Remittance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Lisa Jackson",
+    "monthly_income": 81579,
+    "products": [
+      "Investment",
+      "Insurance",
+      "Mortgage"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Carla Gray",
+    "monthly_income": 55447,
+    "products": [
+      "Remittance",
+      "Insurance"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Margaret Hawkins DDS",
+    "monthly_income": 14175,
+    "products": [
+      "Remittance"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Patty Perez",
+    "monthly_income": 63333,
+    "products": [
+      "Mortgage"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Ethan Adams",
+    "monthly_income": 69348,
+    "products": [
+      "Insurance",
+      "Credit Card",
+      "Investment"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "High"
+  },
+  {
+    "name": "Tommy Walter",
+    "monthly_income": 42973,
+    "products": [
+      "Credit Card",
+      "Savings",
+      "Mortgage"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Matthew Foster",
+    "monthly_income": 8425,
+    "products": [
+      "Insurance",
+      "Remittance",
+      "Credit Card"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Judy Baker",
+    "monthly_income": 74540,
+    "products": [
+      "Remittance",
+      "Savings"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Justin Baker",
+    "monthly_income": 77514,
+    "products": [
+      "Insurance"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Stephanie Ross",
+    "monthly_income": 10552,
+    "products": [
+      "Savings"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Zachary Hicks",
+    "monthly_income": 15592,
+    "products": [
+      "Insurance",
+      "Credit Card"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Anthony Rodriguez",
+    "monthly_income": 71699,
+    "products": [
+      "Insurance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Rebecca Henderson",
+    "monthly_income": 70296,
+    "products": [
+      "Savings",
+      "Insurance"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "James Ferrell",
+    "monthly_income": 35760,
+    "products": [
+      "Investment",
+      "Savings"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Tricia Valencia",
+    "monthly_income": 56944,
+    "products": [
+      "Insurance",
+      "Mortgage",
+      "Credit Card",
+      "Investment"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Nathan Maldonado",
+    "monthly_income": 52313,
+    "products": [
+      "Insurance"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Debra Davidson",
+    "monthly_income": 36864,
+    "products": [
+      "Credit Card"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "High"
+  },
+  {
+    "name": "Jeffrey Chavez",
+    "monthly_income": 15716,
+    "products": [
+      "Credit Card",
+      "Investment"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Sherri Baker",
+    "monthly_income": 75391,
+    "products": [
+      "Savings",
+      "Mortgage"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Cassandra Gaines",
+    "monthly_income": 25342,
+    "products": [
+      "Remittance",
+      "Mortgage",
+      "Insurance",
+      "Credit Card"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Elizabeth Fowler",
+    "monthly_income": 64498,
+    "products": [
+      "Mortgage",
+      "Investment",
+      "Insurance"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Brittany Farmer",
+    "monthly_income": 20899,
+    "products": [
+      "Mortgage"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Paula Moreno",
+    "monthly_income": 22322,
+    "products": [
+      "Remittance",
+      "Investment"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Fred Smith",
+    "monthly_income": 26373,
+    "products": [
+      "Remittance",
+      "Savings",
+      "Mortgage",
+      "Credit Card"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Sherry Decker",
+    "monthly_income": 80132,
+    "products": [
+      "Credit Card"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "High"
+  },
+  {
+    "name": "Anthony Humphrey",
+    "monthly_income": 9934,
+    "products": [
+      "Remittance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Angelica Tucker",
+    "monthly_income": 71653,
+    "products": [
+      "Remittance",
+      "Mortgage",
+      "Credit Card",
+      "Insurance"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Philip Cannon",
+    "monthly_income": 59173,
+    "products": [
+      "Mortgage",
+      "Savings",
+      "Investment"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "High"
+  },
+  {
+    "name": "John Pierce",
+    "monthly_income": 80845,
+    "products": [
+      "Remittance",
+      "Investment",
+      "Savings",
+      "Credit Card"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Shane Henderson",
+    "monthly_income": 79066,
+    "products": [
+      "Investment"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Joshua Blair",
+    "monthly_income": 14572,
+    "products": [
+      "Insurance",
+      "Investment",
+      "Remittance",
+      "Credit Card"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Eric Carney",
+    "monthly_income": 32356,
+    "products": [
+      "Insurance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Jessica Holmes",
+    "monthly_income": 38828,
+    "products": [
+      "Credit Card",
+      "Insurance",
+      "Remittance",
+      "Savings"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Low"
+  },
+  {
+    "name": "Danny Morgan",
+    "monthly_income": 18745,
+    "products": [
+      "Investment",
+      "Insurance",
+      "Savings",
+      "Remittance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Crystal Robinson",
+    "monthly_income": 49180,
+    "products": [
+      "Savings",
+      "Mortgage"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Mark Perez",
+    "monthly_income": 47321,
+    "products": [
+      "Savings",
+      "Credit Card",
+      "Insurance",
+      "Remittance"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "High"
+  },
+  {
+    "name": "Shannon Jones",
+    "monthly_income": 21104,
+    "products": [
+      "Insurance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "Michael Lewis",
+    "monthly_income": 42760,
+    "products": [
+      "Savings",
+      "Credit Card"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Timothy Duncan",
+    "monthly_income": 45353,
+    "products": [
+      "Mortgage",
+      "Insurance"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Richard Aguirre",
+    "monthly_income": 77329,
+    "products": [
+      "Investment"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Moderate"
+  },
+  {
+    "name": "Brent Jordan",
+    "monthly_income": 21577,
+    "products": [
+      "Savings",
+      "Credit Card"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High"
+  },
+  {
+    "name": "John Daniel",
+    "monthly_income": 80512,
+    "products": [
+      "Savings",
+      "Investment"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Low"
+  }
+]
