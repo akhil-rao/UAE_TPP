@@ -1,0 +1,1793 @@
+[
+  {
+    "name": "Allison Hill",
+    "monthly_income": 22592,
+    "products": [
+      "Investment"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2022
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 1,
+      "product_mix_score": 1,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Noah Rhodes",
+    "monthly_income": 36657,
+    "products": [
+      "Insurance",
+      "Investment"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2023
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 5,
+      "product_mix_score": 3,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Angie Henderson",
+    "monthly_income": 28926,
+    "products": [
+      "Savings",
+      "Investment",
+      "Remittance",
+      "Credit Card"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2024
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 5,
+      "product_mix_score": 3,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Daniel Wagner",
+    "monthly_income": 68217,
+    "products": [
+      "Mortgage"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2023
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2022
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 3,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Cristian Santos",
+    "monthly_income": 38512,
+    "products": [
+      "Mortgage"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2023
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2024
+      },
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 5,
+      "product_mix_score": 2,
+      "remittance_behavior_score": 5
+    }
+  },
+  {
+    "name": "Connie Lawrence",
+    "monthly_income": 40087,
+    "products": [
+      "Mortgage",
+      "Investment"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 3,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Abigail Shaffer",
+    "monthly_income": 16675,
+    "products": [
+      "Insurance",
+      "Savings"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2024
+      },
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2023
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2023
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 5,
+      "product_mix_score": 5,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Gina Moore",
+    "monthly_income": 84622,
+    "products": [
+      "Insurance",
+      "Mortgage",
+      "Savings",
+      "Credit Card"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2023
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 5,
+      "product_mix_score": 1,
+      "remittance_behavior_score": 4
+    }
+  },
+  {
+    "name": "Gabrielle Davis",
+    "monthly_income": 58019,
+    "products": [
+      "Insurance",
+      "Savings",
+      "Credit Card",
+      "Investment"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2025
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 1,
+      "product_mix_score": 3,
+      "remittance_behavior_score": 5
+    }
+  },
+  {
+    "name": "Ryan Munoz",
+    "monthly_income": 31416,
+    "products": [
+      "Investment"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2023
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 5,
+      "product_mix_score": 3,
+      "remittance_behavior_score": 4
+    }
+  },
+  {
+    "name": "Monica Herrera",
+    "monthly_income": 10552,
+    "products": [
+      "Savings"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2022
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 1,
+      "product_mix_score": 5,
+      "remittance_behavior_score": 2
+    }
+  },
+  {
+    "name": "Jamie Arnold",
+    "monthly_income": 24828,
+    "products": [
+      "Insurance",
+      "Remittance",
+      "Savings",
+      "Mortgage"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2024
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 3,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 5
+    }
+  },
+  {
+    "name": "Lisa Hensley",
+    "monthly_income": 67177,
+    "products": [
+      "Remittance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2022
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 1,
+      "product_mix_score": 2,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Michele Williams",
+    "monthly_income": 12117,
+    "products": [
+      "Credit Card",
+      "Insurance",
+      "Remittance"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2025
+      },
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2023
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 4,
+      "product_mix_score": 2,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Dylan Miller",
+    "monthly_income": 20704,
+    "products": [
+      "Savings",
+      "Mortgage",
+      "Insurance",
+      "Remittance"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2024
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 2,
+      "remittance_behavior_score": 2
+    }
+  },
+  {
+    "name": "Brian Ramirez",
+    "monthly_income": 78292,
+    "products": [
+      "Remittance",
+      "Mortgage",
+      "Investment",
+      "Insurance"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2022
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 1,
+      "product_mix_score": 2,
+      "remittance_behavior_score": 2
+    }
+  },
+  {
+    "name": "Holly Wood",
+    "monthly_income": 61269,
+    "products": [
+      "Mortgage",
+      "Remittance",
+      "Investment",
+      "Credit Card"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2025
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 4,
+      "product_mix_score": 5,
+      "remittance_behavior_score": 4
+    }
+  },
+  {
+    "name": "Derek Zuniga",
+    "monthly_income": 28289,
+    "products": [
+      "Savings",
+      "Remittance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2022
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 5,
+      "product_mix_score": 5,
+      "remittance_behavior_score": 2
+    }
+  },
+  {
+    "name": "Lisa Jackson",
+    "monthly_income": 15455,
+    "products": [
+      "Remittance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2022
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2023
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 5,
+      "product_mix_score": 5,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Carla Gray",
+    "monthly_income": 18745,
+    "products": [
+      "Investment",
+      "Insurance",
+      "Savings",
+      "Remittance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2023
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2024
+      },
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 3,
+      "product_mix_score": 1,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Margaret Hawkins DDS",
+    "monthly_income": 68068,
+    "products": [
+      "Credit Card"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2023
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2024
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 5
+    }
+  },
+  {
+    "name": "Patty Perez",
+    "monthly_income": 47651,
+    "products": [
+      "Investment"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2022
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 5,
+      "product_mix_score": 2,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Ethan Adams",
+    "monthly_income": 44930,
+    "products": [
+      "Investment",
+      "Savings"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2022
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2022
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 3,
+      "product_mix_score": 1,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Tommy Walter",
+    "monthly_income": 51719,
+    "products": [
+      "Investment",
+      "Savings"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2022
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2022
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 5,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Matthew Foster",
+    "monthly_income": 56393,
+    "products": [
+      "Mortgage",
+      "Remittance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2022
+      },
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 5,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 5
+    }
+  },
+  {
+    "name": "Judy Baker",
+    "monthly_income": 28257,
+    "products": [
+      "Remittance",
+      "Investment"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 1,
+      "remittance_behavior_score": 4
+    }
+  },
+  {
+    "name": "Justin Baker",
+    "monthly_income": 13075,
+    "products": [
+      "Remittance",
+      "Investment",
+      "Mortgage",
+      "Insurance"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2025
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 3,
+      "product_mix_score": 1,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Stephanie Ross",
+    "monthly_income": 54025,
+    "products": [
+      "Investment",
+      "Insurance",
+      "Savings",
+      "Credit Card"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2022
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 5,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Zachary Hicks",
+    "monthly_income": 49114,
+    "products": [
+      "Insurance",
+      "Investment",
+      "Credit Card",
+      "Remittance"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2024
+      },
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 1,
+      "product_mix_score": 3,
+      "remittance_behavior_score": 5
+    }
+  },
+  {
+    "name": "Anthony Rodriguez",
+    "monthly_income": 49145,
+    "products": [
+      "Investment"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2024
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2023
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 4,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 2
+    }
+  },
+  {
+    "name": "Rebecca Henderson",
+    "monthly_income": 82593,
+    "products": [
+      "Mortgage",
+      "Insurance",
+      "Credit Card"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2025
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 4,
+      "product_mix_score": 2,
+      "remittance_behavior_score": 5
+    }
+  },
+  {
+    "name": "James Ferrell",
+    "monthly_income": 70021,
+    "products": [
+      "Investment",
+      "Credit Card"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2024
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2023
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2023
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 1,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Tricia Valencia",
+    "monthly_income": 40092,
+    "products": [
+      "Insurance",
+      "Credit Card",
+      "Mortgage",
+      "Remittance"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2025
+      },
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2023
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 1,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Nathan Maldonado",
+    "monthly_income": 63724,
+    "products": [
+      "Remittance",
+      "Insurance"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 5,
+      "product_mix_score": 5,
+      "remittance_behavior_score": 5
+    }
+  },
+  {
+    "name": "Debra Davidson",
+    "monthly_income": 49588,
+    "products": [
+      "Insurance",
+      "Investment",
+      "Mortgage",
+      "Savings"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2024
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2025
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2023
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 3,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Jeffrey Chavez",
+    "monthly_income": 45450,
+    "products": [
+      "Savings",
+      "Investment"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2023
+      },
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 2,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Sherri Baker",
+    "monthly_income": 62377,
+    "products": [
+      "Savings",
+      "Insurance",
+      "Mortgage",
+      "Remittance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2025
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2025
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 3,
+      "product_mix_score": 3,
+      "remittance_behavior_score": 4
+    }
+  },
+  {
+    "name": "Cassandra Gaines",
+    "monthly_income": 62921,
+    "products": [
+      "Mortgage",
+      "Remittance"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2025
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 5,
+      "remittance_behavior_score": 5
+    }
+  },
+  {
+    "name": "Elizabeth Fowler",
+    "monthly_income": 11534,
+    "products": [
+      "Insurance",
+      "Investment",
+      "Credit Card",
+      "Mortgage"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2022
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 4,
+      "product_mix_score": 3,
+      "remittance_behavior_score": 2
+    }
+  },
+  {
+    "name": "Brittany Farmer",
+    "monthly_income": 67598,
+    "products": [
+      "Savings",
+      "Mortgage",
+      "Investment"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2022
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 1,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Paula Moreno",
+    "monthly_income": 12067,
+    "products": [
+      "Remittance",
+      "Credit Card"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2022
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2023
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 4,
+      "product_mix_score": 3,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Fred Smith",
+    "monthly_income": 29992,
+    "products": [
+      "Remittance"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2025
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2023
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 1,
+      "product_mix_score": 5,
+      "remittance_behavior_score": 2
+    }
+  },
+  {
+    "name": "Sherry Decker",
+    "monthly_income": 21356,
+    "products": [
+      "Investment",
+      "Insurance",
+      "Credit Card"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2024
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2022
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 1,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 4
+    }
+  },
+  {
+    "name": "Anthony Humphrey",
+    "monthly_income": 21833,
+    "products": [
+      "Savings",
+      "Mortgage",
+      "Remittance",
+      "Insurance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2025
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2024
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 1,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Angelica Tucker",
+    "monthly_income": 67087,
+    "products": [
+      "Mortgage",
+      "Insurance"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2024
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 3,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Philip Cannon",
+    "monthly_income": 52608,
+    "products": [
+      "Insurance",
+      "Savings",
+      "Credit Card"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2025
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2023
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 4,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 4
+    }
+  },
+  {
+    "name": "John Pierce",
+    "monthly_income": 10260,
+    "products": [
+      "Savings"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2025
+      },
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 4,
+      "product_mix_score": 5,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Shane Henderson",
+    "monthly_income": 54112,
+    "products": [
+      "Savings",
+      "Investment",
+      "Insurance",
+      "Credit Card"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2023
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Joshua Blair",
+    "monthly_income": 76765,
+    "products": [
+      "Credit Card",
+      "Remittance",
+      "Savings"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 1,
+      "product_mix_score": 1,
+      "remittance_behavior_score": 5
+    }
+  },
+  {
+    "name": "Eric Carney",
+    "monthly_income": 46290,
+    "products": [
+      "Investment",
+      "Mortgage"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2024
+      },
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2023
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 3,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Jessica Holmes",
+    "monthly_income": 16564,
+    "products": [
+      "Mortgage",
+      "Credit Card",
+      "Insurance",
+      "Investment"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2025
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2023
+      },
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 4,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Danny Morgan",
+    "monthly_income": 64207,
+    "products": [
+      "Insurance",
+      "Investment",
+      "Credit Card"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2024
+      },
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 2,
+      "remittance_behavior_score": 2
+    }
+  },
+  {
+    "name": "Crystal Robinson",
+    "monthly_income": 80350,
+    "products": [
+      "Remittance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2022
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 3,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 1
+    }
+  },
+  {
+    "name": "Mark Perez",
+    "monthly_income": 38595,
+    "products": [
+      "Investment",
+      "Insurance",
+      "Remittance"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Low",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2023
+      },
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 1,
+      "product_mix_score": 2,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Shannon Jones",
+    "monthly_income": 82607,
+    "products": [
+      "Mortgage",
+      "Credit Card",
+      "Investment"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2022
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2022
+      },
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 3,
+      "product_mix_score": 5,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Michael Lewis",
+    "monthly_income": 11390,
+    "products": [
+      "Remittance"
+    ],
+    "segment": "High Net Worth",
+    "risk_score": "High",
+    "cars": [
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 5,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Timothy Duncan",
+    "monthly_income": 31788,
+    "products": [
+      "Investment",
+      "Mortgage",
+      "Credit Card",
+      "Remittance"
+    ],
+    "segment": "Emerging Affluent",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "Ferrari",
+        "fuel": "Petrol",
+        "year": 2024
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2025
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2025
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 3,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 5
+    }
+  },
+  {
+    "name": "Richard Aguirre",
+    "monthly_income": 12809,
+    "products": [
+      "Credit Card",
+      "Savings",
+      "Insurance",
+      "Remittance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2025
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2022
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 2,
+      "product_mix_score": 5,
+      "remittance_behavior_score": 3
+    }
+  },
+  {
+    "name": "Brent Jordan",
+    "monthly_income": 73338,
+    "products": [
+      "Credit Card",
+      "Remittance",
+      "Savings",
+      "Mortgage"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "Land Cruiser",
+        "fuel": "Petrol",
+        "year": 2023
+      },
+      {
+        "model": "Tesla Model S",
+        "fuel": "EV",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 5,
+      "product_mix_score": 1,
+      "remittance_behavior_score": 5
+    }
+  },
+  {
+    "name": "John Daniel",
+    "monthly_income": 61476,
+    "products": [
+      "Remittance"
+    ],
+    "segment": "Mass Affluent",
+    "risk_score": "Moderate",
+    "cars": [
+      {
+        "model": "Range Rover",
+        "fuel": "Diesel",
+        "year": 2024
+      },
+      {
+        "model": "BMW 7 Series",
+        "fuel": "Petrol",
+        "year": 2024
+      }
+    ],
+    "risk_breakdown": {
+      "income_score": 4,
+      "product_mix_score": 4,
+      "remittance_behavior_score": 4
+    }
+  }
+]
