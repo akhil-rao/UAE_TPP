@@ -30,7 +30,7 @@ def run():
     st.dataframe(rel_summary, use_container_width=True)
 
     # --- AI Recommendation Summary ---
-    st.markdown("### 🤖 AI Recommendation Summary")
+    st.markdown("### 🤖 AI Recommendations for Ajman Bank")
 
     summary_df = client_df.groupby(["Client Name", "AI Recommendation"]).agg({
         "Account Balance": "sum",
