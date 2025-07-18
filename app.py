@@ -18,7 +18,7 @@ option = st.sidebar.radio("Choose a Module", [
 
 if option == "Home":
     run_home()
-elif option == "RM Copilot Chatbot":
+elif option == "RM Copilot":
     run_rm_copilot()
 elif option == "Embedded Payments Agent":
     run_embedded_payments()
