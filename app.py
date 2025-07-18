@@ -7,7 +7,7 @@ from modules.aml_alerts import run_aml_alerts
 
 st.set_page_config(page_title="UAE TPP Co-Pilot Demo", layout="wide")
 
-st.sidebar.title("🗂 Modules")
+st.sidebar.title(" UAE TPP Modules")
 option = st.sidebar.radio("Choose a Module", [
     "Home",
     "RM Copilot",
