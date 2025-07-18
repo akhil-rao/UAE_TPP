@@ -8,47 +8,36 @@ def run_home():
         {
             "icon": "🧠",
             "title": "RM Copilot Chatbot",
-            "desc": "Intelligent assistant for RMs with risk scoring and next-best actions",
-            "module": "rm_copilot"
+            "desc": "Intelligent assistant for RMs with risk scoring and next-best actions"
         },
         {
             "icon": "🚘",
             "title": "Embedded Payments Agent",
-            "desc": "Vehicle-aware contextual payments and insurance agent",
-            "module": "embedded_payments"
+            "desc": "Vehicle-aware contextual payments and insurance agent"
         },
         {
             "icon": "💱",
             "title": "FX Remittance Agent",
-            "desc": "Suggests optimal remittance timing and provider options",
-            "module": "fx_remittance"
+            "desc": "Suggests optimal remittance timing and provider options"
         },
         {
             "icon": "🚨",
             "title": "AML Alert Dashboard",
-            "desc": "Visual risk analytics for high-risk corridors",
-            "module": "aml_alert"
+            "desc": "Visual risk analytics for high-risk corridors"
         },
         {
             "icon": "🧪",
             "title": "Nebras API Mock",
-            "desc": "Simulated AISP data for accounts and transactions",
-            "module": "nebras_api"
+            "desc": "Simulated AISP data for accounts and transactions"
         },
         {
             "icon": "📊",
             "title": "Customer 360 View",
-            "desc": "Multi-bank intelligence with AI recommendations and financial insights",
-            "module": "customer_360"
+            "desc": "Multi-bank intelligence with AI recommendations and financial insights"
         }
     ]
 
     for mod in modules:
         st.markdown(f"### {mod['icon']} {mod['title']}")
         st.markdown(f"*{mod['desc']}*")
-        if st.button(f"Open {mod['title']}"):
-            # Dynamically run the selected module
-            from modules import customer_360
-            customer_360.run()
-            st.stop()  # Stop further execution
         st.markdown("---")
