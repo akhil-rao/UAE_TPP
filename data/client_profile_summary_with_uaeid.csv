@@ -1,0 +1,81 @@
+UAE ID,Client ID,Client Name,Bank,Products Used,AI Recommendation,Account Balance,Monthly Income,Loan Amount,Insurance Policies,FX Transactions
+784-7359-202626-9,CUST1000,James Miller,Emirates NBD,Current Account,Eligible for Premium Credit Card,30516.1,25907.32,163540.43,0,3
+784-7359-202626-9,CUST1000,James Miller,Abu Dhabi Commercial Bank,Insurance Plan,Eligible for Premium Credit Card,33093.34,15993.46,1868.08,2,30
+784-7359-202626-9,CUST1000,James Miller,Mashreq Bank,Credit Card,Eligible for Premium Credit Card,129878.52,42466.78,151257.07,3,6
+784-7359-202626-9,CUST1000,James Miller,First Abu Dhabi Bank,"Personal Loan, Credit Card",Eligible for Premium Credit Card,114847.66,47586.95,72189.31,0,12
+784-1340-890284-9,CUST1001,Aisha Khalid,Emirates NBD,Insurance Plan,Eligible for Auto Loan Upgrade,30593.45,8013.43,55158.32,1,28
+784-1340-890284-9,CUST1001,Aisha Khalid,Abu Dhabi Commercial Bank,"FX Account, Credit Card",Eligible for Auto Loan Upgrade,96281.4,40788.36,27231.54,1,21
+784-1340-890284-9,CUST1001,Aisha Khalid,Mashreq Bank,"Savings Account, Auto Loan",Eligible for Auto Loan Upgrade,146394.72,45891.27,3141.46,1,26
+784-1340-890284-9,CUST1001,Aisha Khalid,First Abu Dhabi Bank,"Insurance Plan, Savings Account",Eligible for Auto Loan Upgrade,72156.83,47643.13,52786.04,2,30
+784-3727-976906-4,CUST1002,Daniel Johnson,Emirates NBD,"Credit Card, FX Account",Dormant Account – Trigger Reactivation Campaign,99678.85,30919.63,79379.83,1,25
+784-3727-976906-4,CUST1002,Daniel Johnson,Abu Dhabi Commercial Bank,"Credit Card, Personal Loan, Current Account",Dormant Account – Trigger Reactivation Campaign,66383.52,45265.74,124688.91,2,6
+784-3727-976906-4,CUST1002,Daniel Johnson,Mashreq Bank,Credit Card,Dormant Account – Trigger Reactivation Campaign,109436.06,42117.25,41174.47,0,20
+784-3727-976906-4,CUST1002,Daniel Johnson,First Abu Dhabi Bank,"FX Account, Savings Account, Insurance Plan",Dormant Account – Trigger Reactivation Campaign,141544.2,46854.05,109245.87,1,7
+784-9203-143181-4,CUST1003,Ravi Menon,Emirates NBD,Auto Loan,High Fuel Spend – Recommend EV Switch Plan,18692.13,45152.89,18831.65,1,20
+784-9203-143181-4,CUST1003,Ravi Menon,Abu Dhabi Commercial Bank,"Personal Loan, Insurance Plan, Auto Loan",High Fuel Spend – Recommend EV Switch Plan,32451.05,48101.82,196242.64,0,18
+784-9203-143181-4,CUST1003,Ravi Menon,Mashreq Bank,"Personal Loan, FX Account",High Fuel Spend – Recommend EV Switch Plan,36739.0,46125.69,32668.9,1,22
+784-9203-143181-4,CUST1003,Ravi Menon,First Abu Dhabi Bank,FX Account,High Fuel Spend – Recommend EV Switch Plan,29616.54,9548.96,109043.34,2,29
+784-7501-412876-9,CUST1004,Layla Hassan,Emirates NBD,"Insurance Plan, Auto Loan",High Fuel Spend – Recommend EV Switch Plan,72065.96,19471.68,52017.36,2,8
+784-7501-412876-9,CUST1004,Layla Hassan,Abu Dhabi Commercial Bank,"Current Account, Auto Loan, FX Account",High Fuel Spend – Recommend EV Switch Plan,81306.64,39539.43,39974.98,2,21
+784-7501-412876-9,CUST1004,Layla Hassan,Mashreq Bank,Current Account,High Fuel Spend – Recommend EV Switch Plan,69221.54,8105.39,45214.49,1,20
+784-7501-412876-9,CUST1004,Layla Hassan,First Abu Dhabi Bank,"Insurance Plan, Current Account, Auto Loan",High Fuel Spend – Recommend EV Switch Plan,134168.38,40726.92,19980.09,0,21
+784-1340-890284-9,CUST1005,Aisha Khalid,Emirates NBD,"Auto Loan, Savings Account, Personal Loan",Dormant Account – Trigger Reactivation Campaign,108874.27,25736.39,142645.06,1,15
+784-1340-890284-9,CUST1005,Aisha Khalid,Abu Dhabi Commercial Bank,"Current Account, FX Account",Dormant Account – Trigger Reactivation Campaign,108268.16,35856.94,120105.12,3,18
+784-1340-890284-9,CUST1005,Aisha Khalid,Mashreq Bank,"FX Account, Auto Loan, Current Account",Dormant Account – Trigger Reactivation Campaign,90680.37,21723.05,117724.49,2,16
+784-1340-890284-9,CUST1005,Aisha Khalid,First Abu Dhabi Bank,"Insurance Plan, Auto Loan",Dormant Account – Trigger Reactivation Campaign,130816.61,41895.23,89626.96,2,27
+784-1378-720135-9,CUST1006,Yusuf Nader,Emirates NBD,"Savings Account, Current Account",Eligible for Premium Credit Card,71841.08,26671.93,28192.83,0,27
+784-1378-720135-9,CUST1006,Yusuf Nader,Abu Dhabi Commercial Bank,Insurance Plan,Eligible for Premium Credit Card,39757.45,5294.17,92047.49,3,1
+784-1378-720135-9,CUST1006,Yusuf Nader,Mashreq Bank,"Credit Card, Savings Account, Auto Loan",Eligible for Premium Credit Card,22187.57,13113.96,193426.2,1,4
+784-1378-720135-9,CUST1006,Yusuf Nader,First Abu Dhabi Bank,"Current Account, Savings Account",Eligible for Premium Credit Card,14243.69,24313.81,104382.96,2,22
+784-9928-405832-1,CUST1007,Priya Desai,Emirates NBD,Insurance Plan,Travel Pattern Detected – Travel Insurance Offer,67475.91,30454.49,39428.53,2,11
+784-9928-405832-1,CUST1007,Priya Desai,Abu Dhabi Commercial Bank,Savings Account,Travel Pattern Detected – Travel Insurance Offer,16677.35,48045.87,8683.69,3,14
+784-9928-405832-1,CUST1007,Priya Desai,Mashreq Bank,"Savings Account, Credit Card, Current Account",Travel Pattern Detected – Travel Insurance Offer,51881.82,4723.18,164778.54,0,22
+784-9928-405832-1,CUST1007,Priya Desai,First Abu Dhabi Bank,FX Account,Travel Pattern Detected – Travel Insurance Offer,38174.89,41596.98,138581.04,2,6
+784-8032-587526-1,CUST1008,Michael Brown,Emirates NBD,"FX Account, Credit Card",Eligible for Auto Loan Upgrade,128368.02,43851.25,182739.38,0,1
+784-8032-587526-1,CUST1008,Michael Brown,Abu Dhabi Commercial Bank,"FX Account, Current Account, Auto Loan",Eligible for Auto Loan Upgrade,8956.76,33494.27,150312.37,2,23
+784-8032-587526-1,CUST1008,Michael Brown,Mashreq Bank,"Credit Card, FX Account, Auto Loan",Eligible for Auto Loan Upgrade,21682.64,34652.84,3203.43,3,7
+784-8032-587526-1,CUST1008,Michael Brown,First Abu Dhabi Bank,Savings Account,Eligible for Auto Loan Upgrade,32915.82,5020.33,157535.57,0,3
+784-8032-587526-1,CUST1009,Michael Brown,Emirates NBD,Auto Loan,Travel Pattern Detected – Travel Insurance Offer,87438.05,15187.29,105872.95,1,20
+784-8032-587526-1,CUST1009,Michael Brown,Abu Dhabi Commercial Bank,Insurance Plan,Travel Pattern Detected – Travel Insurance Offer,113336.14,38311.24,43985.66,0,17
+784-8032-587526-1,CUST1009,Michael Brown,Mashreq Bank,Insurance Plan,Travel Pattern Detected – Travel Insurance Offer,20446.5,33378.97,40094.4,2,27
+784-8032-587526-1,CUST1009,Michael Brown,First Abu Dhabi Bank,"Current Account, Auto Loan, Savings Account",Travel Pattern Detected – Travel Insurance Offer,108490.12,5694.9,133469.11,2,26
+784-8206-411845-8,CUST1010,Neha Iyer,Emirates NBD,"Auto Loan, Insurance Plan, Savings Account",Travel Pattern Detected – Travel Insurance Offer,43267.83,20968.36,37917.79,1,30
+784-8206-411845-8,CUST1010,Neha Iyer,Abu Dhabi Commercial Bank,Savings Account,Travel Pattern Detected – Travel Insurance Offer,128877.86,21573.9,195759.18,1,21
+784-8206-411845-8,CUST1010,Neha Iyer,Mashreq Bank,"Credit Card, Insurance Plan, Personal Loan",Travel Pattern Detected – Travel Insurance Offer,28177.22,40132.56,175251.22,0,28
+784-8206-411845-8,CUST1010,Neha Iyer,First Abu Dhabi Bank,"Insurance Plan, Auto Loan, Savings Account",Travel Pattern Detected – Travel Insurance Offer,9495.4,12377.84,36944.76,1,21
+784-9804-426554-6,CUST1011,Omar Farouk,Emirates NBD,FX Account,Travel Pattern Detected – Travel Insurance Offer,124037.46,38141.81,71666.49,1,20
+784-9804-426554-6,CUST1011,Omar Farouk,Abu Dhabi Commercial Bank,FX Account,Travel Pattern Detected – Travel Insurance Offer,99381.58,6085.58,4589.8,1,2
+784-9804-426554-6,CUST1011,Omar Farouk,Mashreq Bank,"Insurance Plan, Personal Loan, Savings Account",Travel Pattern Detected – Travel Insurance Offer,146868.58,13625.29,150932.42,0,17
+784-9804-426554-6,CUST1011,Omar Farouk,First Abu Dhabi Bank,Personal Loan,Travel Pattern Detected – Travel Insurance Offer,11973.66,42474.98,122993.16,3,2
+784-7501-412876-9,CUST1012,Layla Hassan,Emirates NBD,"Personal Loan, Savings Account",Low Risk Score – Pre-approved Personal Loan,91049.49,7457.58,144688.16,2,29
+784-7501-412876-9,CUST1012,Layla Hassan,Abu Dhabi Commercial Bank,"Credit Card, Personal Loan, FX Account",Low Risk Score – Pre-approved Personal Loan,76905.01,31160.07,145057.48,0,26
+784-7501-412876-9,CUST1012,Layla Hassan,Mashreq Bank,"Auto Loan, Savings Account",Low Risk Score – Pre-approved Personal Loan,116636.71,8160.94,114205.34,0,18
+784-7501-412876-9,CUST1012,Layla Hassan,First Abu Dhabi Bank,Personal Loan,Low Risk Score – Pre-approved Personal Loan,26702.75,12733.64,156941.14,3,16
+784-4996-841028-9,CUST1013,Meera Joshi,Emirates NBD,Credit Card,Low Risk Score – Pre-approved Personal Loan,102809.67,47506.8,62844.56,0,9
+784-4996-841028-9,CUST1013,Meera Joshi,Abu Dhabi Commercial Bank,"Auto Loan, Credit Card, Savings Account",Low Risk Score – Pre-approved Personal Loan,71715.83,5575.95,590.81,1,15
+784-4996-841028-9,CUST1013,Meera Joshi,Mashreq Bank,"Personal Loan, Current Account",Low Risk Score – Pre-approved Personal Loan,87042.54,31442.02,132700.04,2,8
+784-4996-841028-9,CUST1013,Meera Joshi,First Abu Dhabi Bank,FX Account,Low Risk Score – Pre-approved Personal Loan,144816.29,31566.62,168551.58,1,18
+784-9203-143181-4,CUST1014,Ravi Menon,Emirates NBD,Savings Account,High FX Usage – Offer FX Lock Rates,119628.59,20227.86,193019.92,2,17
+784-9203-143181-4,CUST1014,Ravi Menon,Abu Dhabi Commercial Bank,"Auto Loan, Savings Account, Personal Loan",High FX Usage – Offer FX Lock Rates,22860.5,3437.85,145413.39,1,8
+784-9203-143181-4,CUST1014,Ravi Menon,Mashreq Bank,"Insurance Plan, Savings Account, Credit Card",High FX Usage – Offer FX Lock Rates,62271.21,23267.79,44188.06,2,25
+784-9203-143181-4,CUST1014,Ravi Menon,First Abu Dhabi Bank,"Current Account, Personal Loan, Auto Loan",High FX Usage – Offer FX Lock Rates,116082.36,38978.55,175308.2,1,22
+784-4858-990946-1,CUST1015,Samir Zidan,Emirates NBD,FX Account,Eligible for Auto Loan Upgrade,65398.57,40801.66,142017.7,0,21
+784-4858-990946-1,CUST1015,Samir Zidan,Abu Dhabi Commercial Bank,Personal Loan,Eligible for Auto Loan Upgrade,58439.41,22917.49,94966.0,0,12
+784-4858-990946-1,CUST1015,Samir Zidan,Mashreq Bank,Auto Loan,Eligible for Auto Loan Upgrade,117393.39,42016.13,63521.92,2,11
+784-4858-990946-1,CUST1015,Samir Zidan,First Abu Dhabi Bank,Savings Account,Eligible for Auto Loan Upgrade,50877.83,4225.25,61598.95,2,25
+784-4996-841028-9,CUST1016,Meera Joshi,Emirates NBD,"Current Account, Insurance Plan, Credit Card",Needs SME Working Capital Solution,46672.23,30229.47,78021.33,3,25
+784-4996-841028-9,CUST1016,Meera Joshi,Abu Dhabi Commercial Bank,"FX Account, Current Account",Needs SME Working Capital Solution,106817.09,32767.22,107617.6,3,29
+784-4996-841028-9,CUST1016,Meera Joshi,Mashreq Bank,"Insurance Plan, FX Account",Needs SME Working Capital Solution,53451.76,21688.34,13551.17,2,23
+784-4996-841028-9,CUST1016,Meera Joshi,First Abu Dhabi Bank,"Current Account, Savings Account",Needs SME Working Capital Solution,138464.68,37870.01,49149.47,3,2
+784-8032-587526-1,CUST1017,Michael Brown,Emirates NBD,Auto Loan,Cross-Border Transaction Spikes – Compliance Check,27494.4,41719.09,161032.75,1,0
+784-8032-587526-1,CUST1017,Michael Brown,Abu Dhabi Commercial Bank,Current Account,Cross-Border Transaction Spikes – Compliance Check,100270.57,44572.41,31965.61,0,18
+784-8032-587526-1,CUST1017,Michael Brown,Mashreq Bank,"Credit Card, Current Account, Savings Account",Cross-Border Transaction Spikes – Compliance Check,139729.92,28631.23,134416.6,0,14
+784-8032-587526-1,CUST1017,Michael Brown,First Abu Dhabi Bank,FX Account,Cross-Border Transaction Spikes – Compliance Check,124570.78,18674.29,187205.83,2,26
+784-7501-412876-9,CUST1018,Layla Hassan,Emirates NBD,"Insurance Plan, Current Account, Credit Card",Recommend Takaful Insurance,135708.95,18976.42,75162.68,0,26
+784-7501-412876-9,CUST1018,Layla Hassan,Abu Dhabi Commercial Bank,Current Account,Recommend Takaful Insurance,85233.28,27197.2,119504.25,3,6
+784-7501-412876-9,CUST1018,Layla Hassan,Mashreq Bank,"Current Account, FX Account",Recommend Takaful Insurance,11682.77,49145.86,142126.31,2,12
+784-7501-412876-9,CUST1018,Layla Hassan,First Abu Dhabi Bank,"FX Account, Insurance Plan",Recommend Takaful Insurance,22515.14,38348.06,133804.0,3,5
+784-2923-854138-8,CUST1019,Akhil Sharma,Emirates NBD,"Credit Card, Current Account",Eligible for Premium Credit Card,111869.47,20316.46,19956.56,2,23
+784-2923-854138-8,CUST1019,Akhil Sharma,Abu Dhabi Commercial Bank,FX Account,Eligible for Premium Credit Card,41154.87,36822.03,129920.52,0,12
+784-2923-854138-8,CUST1019,Akhil Sharma,Mashreq Bank,"Auto Loan, FX Account",Eligible for Premium Credit Card,54744.52,45673.02,132902.18,1,26
+784-2923-854138-8,CUST1019,Akhil Sharma,First Abu Dhabi Bank,"FX Account, Savings Account, Auto Loan",Eligible for Premium Credit Card,25431.63,33896.23,61508.14,2,19
