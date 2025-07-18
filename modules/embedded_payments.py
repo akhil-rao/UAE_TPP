@@ -3,7 +3,7 @@ import json
 import random
 
 def run_embedded_payments():
-    st.header("🚘 Embedded Payments with Vehicle-Aware AI")
+    st.header("🚘 Embedded Payments for Vehicle Insurance")
 
     # Load clients
     with open("data/clients.json") as f:
