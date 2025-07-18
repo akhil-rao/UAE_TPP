@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 
 def run():
-    # Set page config
-    st.set_page_config(page_title="Customer 360 View", layout="wide")
     st.title("📊 Customer 360 View – Multi-Bank Intelligence")
 
     # Load customer profile summary data
