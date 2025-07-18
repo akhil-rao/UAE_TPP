@@ -12,17 +12,21 @@ def load_data():
 
 df = load_data()
 
-# --- Sidebar Filters ---
-st.sidebar.header("🔎 Filter Clients")
+# --- Main Pane Filters (not sidebar) ---
+with st.expander("🔎 Filter Clients"):
+    col1, col2, col3 = st.columns(3)
 
-client_names = sorted(df["Client Name"].unique())
-selected_client = st.sidebar.multiselect("Select Client(s)", client_names, default=client_names)
+    with col1:
+        client_names = sorted(df["Client Name"].unique())
+        selected_client = st.multiselect("Select Client(s)", client_names, default=client_names)
 
-advisor_options = sorted(df["AI Recommendation"].unique())
-selected_advice = st.sidebar.multiselect("AI Recommendation", advisor_options, default=advisor_options)
+    with col2:
+        advisor_options = sorted(df["AI Recommendation"].unique())
+        selected_advice = st.multiselect("AI Recommendation", advisor_options, default=advisor_options)
 
-banks = sorted(df["Bank"].unique())
-selected_banks = st.sidebar.multiselect("Bank(s)", banks, default=banks)
+    with col3:
+        banks = sorted(df["Bank"].unique())
+        selected_banks = st.multiselect("Bank(s)", banks, default=banks)
 
 # --- Apply Filters ---
 filtered_df = df[
