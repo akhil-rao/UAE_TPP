@@ -7,7 +7,7 @@ HIGH_RISK_COUNTRIES = ["Iran", "Sudan", "North Korea", "Yemen", "Syria"]
 SIMULATED_PEP_LIST = ["Ahmed Al Falasi", "Zahra Mansoor", "Javed Qureshi"]
 
 def run_rm_copilot():
-    st.header("🧠 RM Copilot Chatbot (UAE Risk Engine)")
+    st.header("🧠 RM Copilot and Chatbot")
 
     with open("data/clients.json") as f:
         clients = json.load(f)
