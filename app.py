@@ -1,24 +1,28 @@
 import streamlit as st
+from modules.home import run_home
 from modules.rm_copilot import run_rm_copilot
 from modules.embedded_payments import run_embedded_payments
 from modules.fx_remittance_agent import run_fx_agent
+from modules.aml_alerts import run_aml_alerts
 
 st.set_page_config(page_title="UAE TPP Co-Pilot Demo", layout="wide")
-st.title("🤖 UAE TPP - Co-Pilot Modules")
 
+st.sidebar.title("🗂 Modules")
 option = st.sidebar.radio("Choose a Module", [
-    "RM / Advisor Copilot",
+    "Home (UAE TPP – Co-Pilot Modules)",
+    "RM Copilot Chatbot",
     "Embedded Payments Agent",
-    "FX Remittance Agent"
+    "FX Remittance Agent",
+    "AML Alert Dashboard"
 ])
 
-if option == "RM / Advisor Copilot":
+if option == "Home (UAE TPP – Co-Pilot Modules)":
+    run_home()
+elif option == "RM Copilot Chatbot":
     run_rm_copilot()
 elif option == "Embedded Payments Agent":
     run_embedded_payments()
 elif option == "FX Remittance Agent":
     run_fx_agent()
-
-from modules.aml_alerts import run_aml_alerts
-if option == "AML Alert Dashboard":
+elif option == "AML Alert Dashboard":
     run_aml_alerts()
