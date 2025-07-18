@@ -3,8 +3,8 @@ from modules.rm_copilot import run_rm_copilot
 from modules.embedded_payments import run_embedded_payments
 from modules.fx_remittance_agent import run_fx_agent
 
-st.set_page_config(page_title="UAE TPP Agentic AI Demo", layout="wide")
-st.title("🤖 UAE TPP - Agentic AI Modules")
+st.set_page_config(page_title="UAE TPP Co-Pilot Demo", layout="wide")
+st.title("🤖 UAE TPP - Co-Pilot Modules")
 
 option = st.sidebar.radio("Choose a Module", [
     "RM / Advisor Copilot",
