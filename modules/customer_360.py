@@ -13,10 +13,10 @@ def run():
 
     df = load_data()
 
-    # --- Sidebar Filter by UAE ID ---
-    st.sidebar.header("🔎 Filter by UAE ID")
+    # --- MAIN FILTER: UAE ID ---
+    st.markdown("### 🔎 Filter by UAE ID")
     uae_ids = sorted(df["UAE ID"].unique())
-    selected_uae_id = st.sidebar.selectbox("Select UAE ID", uae_ids)
+    selected_uae_id = st.selectbox("Select UAE ID", uae_ids)
 
     # Filter data for selected UAE ID
     filtered_df = df[df["UAE ID"] == selected_uae_id]
