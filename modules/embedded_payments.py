@@ -58,7 +58,7 @@ def run_embedded_payments():
     st.info(f"**Recommended:** {recommended}\n\n🧠 {reason}")
 
     st.subheader("🛡 Insurance Options")
-    st.markdown(f"### Based on your **{car_desc}**, here are your top insurance options:")
+    st.markdown(f"### Based on the clients **{car_desc}**, here are your top insurance options:")
 
     st.markdown("#### 1️⃣ Noor Takaful")
     st.markdown(
