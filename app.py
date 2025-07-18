@@ -9,14 +9,14 @@ st.set_page_config(page_title="UAE TPP Co-Pilot Demo", layout="wide")
 
 st.sidebar.title("🗂 Modules")
 option = st.sidebar.radio("Choose a Module", [
-    "Home (UAE TPP – Co-Pilot Modules)",
-    "RM Copilot Chatbot",
+    "Home",
+    "RM Copilot",
     "Embedded Payments Agent",
     "FX Remittance Agent",
     "AML Alert Dashboard"
 ])
 
-if option == "Home (UAE TPP – Co-Pilot Modules)":
+if option == "Home":
     run_home()
 elif option == "RM Copilot Chatbot":
     run_rm_copilot()
