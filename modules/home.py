@@ -1,8 +1,12 @@
 import streamlit as st
 
 def run_home():
-    st.title("🏠 ")
+    st.set_page_config(page_title="UAE TPP – Co-Pilot Modules", layout="wide")
+    st.title("🏠 UAE TPP – Co-Pilot Modules")
 
+    # Sidebar navigation
+    st.sidebar.title("🧭 Navigation")
+    st.sidebar.page_link("modules/customer_360.py", label="Customer 360 View")
 
     modules = [
         {"icon": "🧠", "title": "RM Copilot Chatbot", "desc": "Intelligent assistant for RMs with risk scoring and next-best actions"},
