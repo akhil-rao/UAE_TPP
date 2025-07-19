@@ -2,6 +2,7 @@ import streamlit as st
 import json
 import random
 
+# Simulated high-risk corridors and PEP names
 HIGH_RISK_COUNTRIES = ["Iran", "Sudan", "North Korea", "Yemen", "Syria"]
 SIMULATED_PEP_LIST = ["Ahmed Al Falasi", "Zahra Mansoor", "Javed Qureshi"]
 
@@ -11,10 +12,22 @@ def run_rm_copilot():
     with open("data/clients.json") as f:
         clients = json.load(f)
 
-    client_names = [client["name"] for client in clients]
-    selected_name = st.selectbox("Select a Client", client_names)
-    client = next((c for c in clients if c["name"] == selected_name), None)
+    # Step 1: Select RM Role
+    roles = sorted(set(client.get("rm_role", "General RM") for client in clients))
+    selected_role = st.selectbox("Step 1: Select RM Role", roles)
 
+    # Step 2: Select client based on role
+    filtered_clients = [c for c in clients if c.get("rm_role") == selected_role]
+    client_names = [client["name"] for client in filtered_clients]
+
+    if not client_names:
+        st.warning("No clients found for this RM role.")
+        return
+
+    selected_name = st.selectbox("Step 2: Select a Client", client_names)
+    client = next((c for c in filtered_clients if c["name"] == selected_name), None)
+
+    # --- Client Profile ---
     st.subheader("📋 Client Profile")
     st.write(f"**Name:** {client['name']}")
     st.write(f"**Income:** AED {client['monthly_income']:,}")
@@ -25,8 +38,7 @@ def run_rm_copilot():
     for car in client["cars"]:
         st.markdown(f"- {car['model']} ({car['fuel']}, {car['year']})")
 
-    # --- Risk Engine ---
-
+    # --- Risk Assessment ---
     st.subheader("🧮 Risk Assessment Breakdown")
 
     income_score = client.get("risk_breakdown", {}).get("income_score", 3)
@@ -57,8 +69,7 @@ def run_rm_copilot():
     ### 🧮 Total Risk Score: {total_score} → **{risk_cat} Risk**
     """)
 
-    # --- Copilot Chatbot ---
-
+    # --- Chatbot Section ---
     st.divider()
     st.subheader("💬 Ask the RM Copilot")
 
@@ -111,10 +122,12 @@ def run_rm_copilot():
                 "Suggest Takaful Insurance",
                 "Promote Visa Infinite Card"
             ])
+
             pick = random.sample(actions, 3)
             pitch = f"Hi {client['name'].split()[0]}, our {pick[0]} could be ideal this month."
             if risk == "High":
                 pitch += " (Further checks may apply due to high risk.)"
+
             return f"Suggested Actions:\n- {pick[0]}\n- {pick[1]}\n- {pick[2]}\n\nPitch:\n\"{pitch}\""
 
         result = simulate_response(client, risk_cat)
