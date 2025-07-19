@@ -1,15 +1,16 @@
+
 import streamlit as st
 import json
 import random
 
-# Simulated high-risk corridors and PEP names (for demo)
+# Simulated high-risk corridors and PEP names
 HIGH_RISK_COUNTRIES = ["Iran", "Sudan", "North Korea", "Yemen", "Syria"]
 SIMULATED_PEP_LIST = ["Ahmed Al Falasi", "Zahra Mansoor", "Javed Qureshi"]
 
 def run_rm_copilot():
     st.header("🧠 RM Copilot and Chatbot")
 
-    with open("data/clients.json") as f:
+    with open("data/clients_with_roles.json") as f:
         clients = json.load(f)
 
     client_names = [client["name"] for client in clients]
@@ -19,8 +20,10 @@ def run_rm_copilot():
     st.subheader("📋 Client Profile")
     st.write(f"**Name:** {client['name']}")
     st.write(f"**Income:** AED {client['monthly_income']:,}")
+    st.write(f"**Segment:** {client['segment']}")
+    st.write(f"**RM Role:** {client['rm_role']}")
     st.write(f"**Products:** {', '.join(client['products'])}")
-    st.write(f"**Cars:** {', '.join([car['model'] for car in client['cars']])}")
+    st.write(f"**Cars:** {', '.join([f"{car['model']} ({car['fuel']}, {car['year']})" for car in client['cars']])}")
 
     # --- UAE-Style Risk Engine ---
 
@@ -32,54 +35,22 @@ def run_rm_copilot():
     is_pep = client["name"] in SIMULATED_PEP_LIST
     simulated_credit_score = random.randint(550, 850)
 
-    # 1. Income-based risk score
-    if income > 50000:
-        income_score = 1
-    elif income > 20000:
-        income_score = 2
-    elif income > 10000:
-        income_score = 3
-    else:
-        income_score = 4
-
-    # 2. Product diversity risk
-    if num_products >= 4:
-        product_score = 1
-    elif num_products == 3:
-        product_score = 2
-    elif num_products == 2:
-        product_score = 3
-    else:
-        product_score = 4
-
-    # 3. FX corridor risk
+    # Use provided breakdowns if available
+    income_score = client.get("risk_breakdown", {}).get("income_score", 3)
+    product_score = client.get("risk_breakdown", {}).get("product_mix_score", 3)
     fx_score = 5 if fx_country in HIGH_RISK_COUNTRIES else 2
-
-    # 4. PEP / sanctions risk
     pep_score = 10 if is_pep else 0
-
-    # 5. Credit score proxy
-    if simulated_credit_score > 800:
-        credit_score = 1
-        credit_label = "Excellent"
-    elif simulated_credit_score > 650:
-        credit_score = 3
-        credit_label = "Moderate"
-    else:
-        credit_score = 5
-        credit_label = "High Risk"
+    credit_score = 1 if simulated_credit_score > 800 else 3 if simulated_credit_score > 650 else 5
+    credit_label = "Excellent" if credit_score == 1 else "Moderate" if credit_score == 3 else "High Risk"
 
     # Final risk score
     total_risk_score = income_score + product_score + fx_score + pep_score + credit_score
+    risk_category = (
+        "Low" if total_risk_score <= 8 else
+        "Moderate" if total_risk_score <= 14 else
+        "High"
+    )
 
-    if total_risk_score <= 8:
-        risk_category = "Low"
-    elif total_risk_score <= 14:
-        risk_category = "Moderate"
-    else:
-        risk_category = "High"
-
-    # Display risk breakdown
     st.markdown(f"""
     ✔ **Monthly Income**: AED {income:,} → Risk Score: {income_score}  
     ✔ **Products Held**: {num_products} → Risk Score: {product_score}  
@@ -104,18 +75,33 @@ def run_rm_copilot():
         st.session_state.chat_history.append({"role": "user", "content": user_input})
 
         def simulate_response(profile, risk_level):
-            actions = random.sample([
+            role = profile.get("rm_role", "General RM")
+
+            role_based_actions = {
+                "Private Banker / Wealth RM": ["Offer Wealth Planning Review", "Suggest Premium Takaful", "Invite to Investment Seminar"],
+                "Loan Sales RM / Mortgage Specialist": ["Promote Home Loan Balance Transfer", "Offer Property Insurance", "Discuss Repricing Options"],
+                "Remittance RM / FX Sales RM": ["Offer FX Wallet", "Promote Low-Fee Corridor Plan", "Suggest Forward Contract"],
+                "Credit Card RM / Cards Product Manager": ["Suggest Platinum Card Upgrade", "Offer Cashback Optimization", "Push Summer Travel Offer"],
+                "Bancassurance RM / Insurance Advisor": ["Recommend Critical Illness Plan", "Offer Term Life Coverage", "Run Retirement Planning Tool"],
+                "Retail RM / Community RM": ["Invite to Financial Fitness Workshop", "Cross-sell Credit Card", "Offer Digital Savings Goal Tracker"]
+            }
+
+            actions = role_based_actions.get(role, [
                 "Offer Wealth Management Plan",
                 "Suggest Takaful Insurance",
-                "Recommend FX Subscription Pack",
-                "Flag for Enhanced Due Diligence",
                 "Promote Visa Infinite Card"
-            ], 3)
-
-            pitch = f"Hi {profile['name'].split()[0]}, based on your profile, our {actions[0]} could be a great fit this month."
+            ])
+            selected = random.sample(actions, min(3, len(actions)))
+            pitch = f"Hi {profile['name'].split()[0]}, based on your profile, our {selected[0]} could be a great fit this month."
             if risk_level == "High":
                 pitch += " (Note: due to high risk profile, further checks may be required.)"
-            return f"Suggested Actions:\n- {actions[0]}\n- {actions[1]}\n- {actions[2]}\n\nWhatsApp Pitch:\n\"{pitch}\""
+            return f"Suggested Actions:
+- {selected[0]}
+- {selected[1]}
+- {selected[2]}
+
+WhatsApp Pitch:
+"{pitch}""
 
         response = simulate_response(client, risk_category)
         st.session_state.chat_history.append({"role": "assistant", "content": response})
