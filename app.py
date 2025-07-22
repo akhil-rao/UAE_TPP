@@ -17,7 +17,7 @@ option = st.sidebar.radio("Choose a Module", [
     "FX Remittance Agent",
     "AML Alert Dashboard",
     "Customer 360 View",
-    "Wealth Manager Copilot (Streamlit)"  # ✅ NEW
+    "Wealth Manager Copilot"  # ✅ NEW
 ])
 
 if option == "Home":
