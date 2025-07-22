@@ -1,19 +1,32 @@
 import streamlit as st
 import pandas as pd
-import random
 
 def run_wealth_copilot():
     st.title("🧠 Wealth Manager Copilot")
 
-    # Dummy customer selector
-    customers = [f"Client {i:02d}" for i in range(1, 11)]
-    selected_customer = st.selectbox("Select Customer", customers)
+    # Realistic clients
+    clients = [
+        {"name": "Fatima Al Mansouri", "aum": 4.2, "income": 820, "risk": "Low", "risk_delta": "-1"},
+        {"name": "Omar Al Fardan", "aum": 6.8, "income": 1200, "risk": "Medium", "risk_delta": "0"},
+        {"name": "Salim Khan", "aum": 3.1, "income": 460, "risk": "High", "risk_delta": "+1"},
+        {"name": "Laila Hassan", "aum": 2.7, "income": 510, "risk": "Medium", "risk_delta": "0"},
+        {"name": "Yousef Al Qasimi", "aum": 7.5, "income": 1500, "risk": "Low", "risk_delta": "-2"},
+        {"name": "Zara Noor", "aum": 5.9, "income": 910, "risk": "Medium", "risk_delta": "+1"},
+        {"name": "Ahmed bin Zayed", "aum": 10.2, "income": 2000, "risk": "Low", "risk_delta": "-1"},
+        {"name": "Noor Al Shamsi", "aum": 3.8, "income": 640, "risk": "High", "risk_delta": "+2"},
+        {"name": "Khalid Al Mazrouei", "aum": 9.3, "income": 1300, "risk": "Low", "risk_delta": "-1"},
+        {"name": "Dana Al Suwaidi", "aum": 4.6, "income": 760, "risk": "Medium", "risk_delta": "0"}
+    ]
+
+    client_names = [c["name"] for c in clients]
+    selected_name = st.selectbox("Select Customer", client_names)
+    client = next(c for c in clients if c["name"] == selected_name)
 
     st.markdown("### 🧾 Client Overview")
     col1, col2, col3 = st.columns(3)
-    col1.metric("Total AUM", "AED 4.2M", "+2.5% MoM")
-    col2.metric("Annual Income", "AED 820K")
-    col3.metric("Risk Score", "Low", delta="-1")
+    col1.metric("Total AUM", f"AED {client['aum']:.1f}M")
+    col2.metric("Annual Income", f"AED {client['income']}K")
+    col3.metric("Risk Score", client["risk"], delta=client["risk_delta"])
 
     st.markdown("---")
     st.markdown("### 🚗 Car Assets")
@@ -26,12 +39,21 @@ def run_wealth_copilot():
     st.dataframe(car_data, use_container_width=True)
 
     st.markdown("---")
-    st.markdown("### 🧮 AI Advisor Insights")
+    st.markdown("### 🧮 AI Advisor Mode – Tailored by Risk Profile")
     with st.expander("💡 See AI-Powered Recommendations"):
-        st.markdown("- Suggest portfolio rebalance towards fixed income for capital preservation.")
-        st.markdown("- Recommend insurance review: 3 uncovered luxury vehicles.")
-        st.markdown("- Introduce green investment options aligned with EV ownership.")
-        st.markdown("- Offer FX hedging for EUR-denominated assets.")
+
+        if client["risk"] == "Low":
+            st.markdown("- Maintain diversified equity exposure, consider fixed income for stability.")
+            st.markdown("- Explore long-term retirement planning and estate structuring.")
+            st.markdown("- Review insurance cover to match luxury asset growth.")
+        elif client["risk"] == "Medium":
+            st.markdown("- Increase allocation to bonds or market-neutral strategies.")
+            st.markdown("- Revisit FX exposure across remittance and investment flows.")
+            st.markdown("- Recommend partial hedging against rate volatility.")
+        elif client["risk"] == "High":
+            st.markdown("- Reduce exposure to volatile instruments (crypto, small caps).")
+            st.markdown("- Recommend immediate portfolio rebalancing.")
+            st.markdown("- Suggest automated alerts and RM check-ins every 2 weeks.")
 
     st.markdown("---")
     st.markdown("### 📈 Portfolio Allocation (Mock)")
