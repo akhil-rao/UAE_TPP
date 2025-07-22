@@ -47,5 +47,3 @@ def run_wealth_copilot():
     - Number of High-Value Assets: 4
     - Last RM Review: 45 days ago
     """)
-
-    st.success("This module is 100% Streamlit-native – no iframe or external React dependency.")
