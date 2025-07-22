@@ -32,5 +32,5 @@ elif option == "AML Alert Dashboard":
     run_aml_alerts()
 elif option == "Customer 360 View":
     run_customer_360()
-elif option == "Wealth Manager Copilot (Streamlit)":  # ✅ NEW
+elif option == "Wealth Manager Copilot":  # ✅ NEW
     run_wealth_copilot()
