@@ -3,7 +3,7 @@ import pandas as pd
 import random
 
 def run_wealth_copilot():
-    st.title("🧠 Wealth Manager Copilot – Streamlit Version")
+    st.title("🧠 Wealth Manager Copilot")
 
     # Dummy customer selector
     customers = [f"Client {i:02d}" for i in range(1, 11)]
