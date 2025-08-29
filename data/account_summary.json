@@ -6,18 +6,18 @@
   "trade_license_no": "TL-2020-1234567",
   "accounts": [
     {
-      "bank": "Mashreq",
-      "iban": "AE22026000000000006543",
+      "bank": "Emirates NBD",
+      "iban": "AE12026000000000003456",
       "product_type": "CURRENT",
       "currency": "AED",
-      "balance": 725000.00,
+      "balance": 720000.00,
       "avg_balance_6m": 680000.00,
       "overdraft_limit": 0.00,
       "overdraft_utilized": 0.00,
       "last_updated": "2024-09-30"
     },
     {
-      "bank": "FAB",
+      "bank": "First Abu Dhabi Bank",
       "iban": "AE47026000000000009012",
       "product_type": "OVERDRAFT",
       "currency": "AED",
@@ -28,12 +28,12 @@
       "last_updated": "2024-09-30"
     },
     {
-      "bank": "ENBD",
-      "iban": "AE12026000000000003456",
-      "product_type": "TERM_LOAN",
+      "bank": "Mashreq",
+      "iban": "AE22026000000000006543",
+      "product_type": "CURRENT",
       "currency": "AED",
-      "balance": -2400000.00,
-      "avg_balance_6m": -2350000.00,
+      "balance": 1150000.00,
+      "avg_balance_6m": 1100000.00,
       "overdraft_limit": 0.00,
       "overdraft_utilized": 0.00,
       "last_updated": "2024-09-30"
