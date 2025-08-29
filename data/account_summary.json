@@ -1,1 +1,42 @@
-{"account_holder": "Fatima Khan", "accounts": [{"bank": "Mashreq", "balance": 18000, "currency": "AED"}, {"bank": "FAB", "balance": 12500, "currency": "AED"}]}
+{
+  "account_holder": "Al Noor Trading LLC",
+  "entity_type": "Corporate",
+  "jurisdiction": "UAE (Dubai)",
+  "sector": "Wholesale/Distribution",
+  "trade_license_no": "TL-2020-1234567",
+  "accounts": [
+    {
+      "bank": "Mashreq",
+      "iban": "AE22026000000000006543",
+      "product_type": "CURRENT",
+      "currency": "AED",
+      "balance": 725000.00,
+      "avg_balance_6m": 680000.00,
+      "overdraft_limit": 0.00,
+      "overdraft_utilized": 0.00,
+      "last_updated": "2024-09-30"
+    },
+    {
+      "bank": "FAB",
+      "iban": "AE47026000000000009012",
+      "product_type": "OVERDRAFT",
+      "currency": "AED",
+      "balance": -950000.00,
+      "avg_balance_6m": -820000.00,
+      "overdraft_limit": 3000000.00,
+      "overdraft_utilized": 950000.00,
+      "last_updated": "2024-09-30"
+    },
+    {
+      "bank": "ENBD",
+      "iban": "AE12026000000000003456",
+      "product_type": "TERM_LOAN",
+      "currency": "AED",
+      "balance": -2400000.00,
+      "avg_balance_6m": -2350000.00,
+      "overdraft_limit": 0.00,
+      "overdraft_utilized": 0.00,
+      "last_updated": "2024-09-30"
+    }
+  ]
+}
