@@ -1,1 +1,22 @@
-{"transactions": [{"date": "2024-07-01", "amount": -2300, "desc": "Remittance - India"}, {"date": "2024-07-05", "amount": -80, "desc": "Fuel - ADNOC"}, {"date": "2024-07-10", "amount": 6000, "desc": "Salary - Emirates Health"}]}
+[
+  { "date": "2024-07-01", "amount": -2300, "desc": "Remittance - India", "description": "Remittance - India", "counterparty": "Remittance", "type": "DEBIT", "currency": "AED" },
+  { "date": "2024-07-05", "amount": -1200, "desc": "EMI DEDUCTION ENBD", "description": "EMI DEDUCTION ENBD", "counterparty": "ENBD", "type": "DEBIT", "currency": "AED" },
+  { "date": "2024-07-05", "amount": -80,   "desc": "Fuel - ADNOC",        "description": "Fuel - ADNOC",        "counterparty": "ADNOC", "type": "DEBIT", "currency": "AED" },
+  { "date": "2024-07-10", "amount":  6000, "desc": "Salary - Emirates Health", "description": "Salary - Emirates Health", "counterparty": "Emirates Health", "type": "CREDIT", "currency": "AED" },
+  { "date": "2024-07-15", "amount":  -350, "desc": "Groceries - Carrefour", "description": "Groceries - Carrefour", "counterparty": "Carrefour", "type": "DEBIT", "currency": "AED" },
+  { "date": "2024-07-28", "amount":  -220, "desc": "Utilities - DEWA/Etisalat", "description": "Utilities - DEWA/Etisalat", "counterparty": "DEWA/Etisalat", "type": "DEBIT", "currency": "AED" },
+
+  { "date": "2024-08-01", "amount": -2300, "desc": "Remittance - India", "description": "Remittance - India", "counterparty": "Remittance", "type": "DEBIT", "currency": "AED" },
+  { "date": "2024-08-05", "amount": -1200, "desc": "EMI DEDUCTION ENBD", "description": "EMI DEDUCTION ENBD", "counterparty": "ENBD", "type": "DEBIT", "currency": "AED" },
+  { "date": "2024-08-07", "amount":   -90, "desc": "Fuel - ADNOC",        "description": "Fuel - ADNOC",        "counterparty": "ADNOC", "type": "DEBIT", "currency": "AED" },
+  { "date": "2024-08-10", "amount":  6000, "desc": "Salary - Emirates Health", "description": "Salary - Emirates Health", "counterparty": "Emirates Health", "type": "CREDIT", "currency": "AED" },
+  { "date": "2024-08-18", "amount":  -200, "desc": "Shopping - Noon",     "description": "Shopping - Noon",     "counterparty": "Noon", "type": "DEBIT", "currency": "AED" },
+  { "date": "2024-08-27", "amount":  -210, "desc": "Utilities - DEWA/Etisalat", "description": "Utilities - DEWA/Etisalat", "counterparty": "DEWA/Etisalat", "type": "DEBIT", "currency": "AED" },
+
+  { "date": "2024-09-01", "amount": -2300, "desc": "Remittance - India", "description": "Remittance - India", "counterparty": "Remittance", "type": "DEBIT", "currency": "AED" },
+  { "date": "2024-09-05", "amount": -1200, "desc": "EMI DEDUCTION ENBD", "description": "EMI DEDUCTION ENBD", "counterparty": "ENBD", "type": "DEBIT", "currency": "AED" },
+  { "date": "2024-09-09", "amount":   -85, "desc": "Fuel - ADNOC",        "description": "Fuel - ADNOC",        "counterparty": "ADNOC", "type": "DEBIT", "currency": "AED" },
+  { "date": "2024-09-10", "amount":  6000, "desc": "Salary - Emirates Health", "description": "Salary - Emirates Health", "counterparty": "Emirates Health", "type": "CREDIT", "currency": "AED" },
+  { "date": "2024-09-20", "amount":  -400, "desc": "Insurance Premium",   "description": "Insurance Premium",   "counterparty": "XYZ Insurance", "type": "DEBIT", "currency": "AED" },
+  { "date": "2024-09-28", "amount":  -230, "desc": "Utilities - DEWA/Etisalat", "description": "Utilities - DEWA/Etisalat", "counterparty": "DEWA/Etisalat", "type": "DEBIT", "currency": "AED" }
+]
