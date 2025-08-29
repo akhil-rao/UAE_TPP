@@ -1,9 +1,8 @@
 UAE ID,Client Name,Bank,Products Used,IBAN Masked,Primary,Avg Balance 6m (AED),Overdraft Limit (AED),Overdraft Utilization %,Loans Outstanding Est (AED),Relationship Since
 TL-2020-1234567,Al Noor Trading LLC,Emirates NBD,Current Account,AE12****3456,TRUE,680000,0,0,0,2018-05-01
-TL-2020-1234567,Al Noor Trading LLC,Emirates NBD,LC Line,,TRUE,,3500000,31,0,2019-02-10
-TL-2020-1234567,Al Noor Trading LLC,First Abu Dhabi Bank,Overdraft,AE47****9012,FALSE,420000,2000000,48,0,2020-07-15
-TL-2020-1234567,Al Noor Trading LLC,First Abu Dhabi Bank,Term Loan,,FALSE,,,0,2400000,2023-03-20
-TL-2020-1234567,Al Noor Trading LLC,Mashreq,Current Account,AE22****6543,FALSE,1150000,0,0,0,2017-11-03
+TL-2020-1234567,Al Noor Trading LLC,Emirates NBD,Term Loan,,TRUE,,0,0,2400000,2023-03-20
+TL-2020-1234567,Al Noor Trading LLC,First Abu Dhabi Bank,Overdraft,AE47****9012,FALSE,-820000,3000000,32,0,2020-07-15
+TL-2020-1234567,Al Noor Trading LLC,Mashreq,Current Account,AE22****6543,FALSE,1100000,0,0,0,2017-11-03
 TL-2019-5566778,Desert Solar FZE,FAB,Current Account,AE88****1122,TRUE,390000,0,0,0,2020-04-22
 TL-2019-5566778,Desert Solar FZE,FAB,Project Guarantee/BG,,TRUE,,,0,0,2021-01-12
 TL-2019-5566778,Desert Solar FZE,NBK UAE,Term Loan,,FALSE,,,0,1800000,2022-06-30
