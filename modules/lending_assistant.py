@@ -1,14 +1,17 @@
-# modules/lending_assistant.py
 import streamlit as st
 import pandas as pd
 import numpy as np
 from pathlib import Path
 from datetime import datetime
+import re
 
-# =========================================
-# Paths & cached loaders
-# =========================================
+# =========================
+# Paths & helpers
+# =========================
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+
+def _slug(s: str) -> str:
+    return re.sub(r"[^A-Za-z0-9\-]+", "_", str(s)).strip("_")
 
 @st.cache_data
 def load_df_json(path: Path) -> pd.DataFrame:
@@ -20,30 +23,101 @@ def load_df_json(path: Path) -> pd.DataFrame:
 @st.cache_data
 def load_df_csv(path: Path) -> pd.DataFrame:
     """
-    Robust CSV loader:
-    - tries utf-8-sig (handles BOM from Excel)
-    - falls back to utf-8
+    Robust CSV loader for Excel-exported files.
+    Tries utf-8-sig (BOM), then utf-8, uses python engine and skips bad lines.
     """
-    try:
-        return pd.read_csv(path, encoding="utf-8-sig")
-    except Exception:
+    if not path.exists():
+        return pd.DataFrame()
+    for enc in ("utf-8-sig", "utf-8"):
         try:
-            return pd.read_csv(path, encoding="utf-8")
+            return pd.read_csv(path, encoding=enc, engine="python", on_bad_lines="skip")
         except Exception:
-            return pd.DataFrame()
+            continue
+    return pd.DataFrame()
 
 @st.cache_data
-def load_all_data():
-    tx = load_df_json(DATA_DIR / "transactions.json")
-    mb = load_df_csv(DATA_DIR / "multi_bank_profile.csv")
-    acct = load_df_json(DATA_DIR / "account_summary.json")
+def file_exists(path: Path) -> bool:
+    return path.exists()
+
+# =========================
+# Data loading (by client)
+# =========================
+@st.cache_data
+def list_clients_from_mbp(mbp: pd.DataFrame):
+    """Return sorted list of (client_name, client_id) tuples from multi_bank_profile.csv."""
+    if mbp.empty:
+        return []
+    # Expect columns: 'UAE ID' (Trade License or UAE ID) and 'Client Name'
+    id_col = None
+    for c in mbp.columns:
+        if c.strip().lower() in ("uae id", "uae_id", "trade license", "trade_license", "trade license no", "trade_license_no"):
+            id_col = c
+            break
+    name_col = None
+    for c in mbp.columns:
+        if c.strip().lower() in ("client name", "client_name", "name"):
+            name_col = c
+            break
+    if id_col is None or name_col is None:
+        # Fallback: just return unique names
+        names = sorted(mbp.iloc[:,1].dropna().unique().tolist())
+        return [(n, _slug(n)) for n in names]
+    # Build unique pairs
+    pairs = mbp[[name_col, id_col]].drop_duplicates().values.tolist()
+    # sort by name
+    pairs = sorted(pairs, key=lambda x: str(x[0]))
+    return [(p[0], str(p[1])) for p in pairs]
+
+def try_load_of_files_for_client(client_id: str, client_name: str):
+    """
+    Tries to load client-specific OF files if present:
+    - transactions_{id}.json or transactions_{slug}.json, else transactions.json
+    - account_summary_{id}.json or account_summary_{slug}.json, else account_summary.json
+    - checklist fixed name
+    """
+    # Multi-bank profile is shared
+    mbp = load_df_csv(DATA_DIR / "multi_bank_profile.csv")
+
+    # Transactions
+    tx_paths = [
+        DATA_DIR / f"transactions_{client_id}.json",
+        DATA_DIR / f"transactions_{_slug(client_name)}.json",
+        DATA_DIR / "transactions.json",
+    ]
+    tx = pd.DataFrame()
+    for p in tx_paths:
+        if file_exists(p):
+            tx = load_df_json(p)
+            if not tx.empty:
+                break
+
+    # Account summary
+    acct_paths = [
+        DATA_DIR / f"account_summary_{client_id}.json",
+        DATA_DIR / f"account_summary_{_slug(client_name)}.json",
+        DATA_DIR / "account_summary.json",
+    ]
+    acct = pd.DataFrame()
+    # account_summary might be an object (dict) not a table; keep raw JSON as dict if needed
+    try:
+        import json
+        for p in acct_paths:
+            if p.exists():
+                # read raw JSON
+                raw = json.loads(p.read_text(encoding="utf-8"))
+                acct = pd.json_normalize(raw.get("accounts", raw))  # normalize to table if possible
+                break
+    except Exception:
+        acct = load_df_json(DATA_DIR / "account_summary.json")
+
+    # Checklist (single shared file)
     chk = load_df_csv(DATA_DIR / "CBUAE_Corporate_Lending_Checklist.csv")
-    return tx, mb, acct, chk
 
+    return tx, mbp, acct, chk
 
-# =========================================
-# Feature engineering helpers
-# =========================================
+# =========================
+# Feature engineering
+# =========================
 def normalize_tx(df: pd.DataFrame) -> pd.DataFrame:
     if df.empty:
         return df
@@ -55,7 +129,6 @@ def normalize_tx(df: pd.DataFrame) -> pd.DataFrame:
     if "amount" not in df.columns:
         df["amount"] = 0.0
     if "description" not in df.columns:
-        # stay backward compatible with 'desc'
         df["description"] = df.get("desc", "")
     if "counterparty" not in df.columns:
         df["counterparty"] = ""
@@ -80,8 +153,7 @@ def bounced_indicator(tx: pd.DataFrame) -> int:
     if tx.empty:
         return 0
     desc = (tx.get("description", pd.Series([""]*len(tx))).fillna("")
-            + " " + tx.get("type", pd.Series([""]*len(tx))).fillna(""))
-    desc = desc.str.upper()
+            + " " + tx.get("type", pd.Series([""]*len(tx))).fillna("")).str.upper()
     hints = ["BOUNC", "RETURN", "UNPAID", "RD CHQ", "CHEQUE RETURN", "RJCT", "RTO"]
     return int(desc.apply(lambda s: any(h in s for h in hints)).sum())
 
@@ -90,10 +162,6 @@ def inflow_volatility(monthly: pd.DataFrame) -> float:
         return 0.0
     return float(np.std(monthly["inflow"]) / max(1e-9, monthly["inflow"].mean()))
 
-
-# =========================================
-# Other-bank loan detection (heuristic)
-# =========================================
 BANK_KEYWORDS = [
     "ENBD","EMIRATES NBD","FAB","FIRST ABU DHABI","ADCB","MASHREQ","RAKBANK","DIB","DUBAI ISLAMIC",
     "NBAD","NBK","ABK","SCB","STANDARD CHARTERED","HSBC","CITI","BARCLAYS",
@@ -107,19 +175,15 @@ def detect_external_loans(tx_df: pd.DataFrame) -> pd.DataFrame:
     df = tx_df.copy()
     df["desc_union"] = (df.get("description","").astype(str) + " " + df.get("counterparty","").astype(str)).str.upper()
     debits = df[df["amount"] < 0].copy()
-
     def hit(s): return any(k in s for k in BANK_KEYWORDS) or any(h in s for h in EMI_HINTS)
     debits = debits[debits["desc_union"].apply(hit)]
     if debits.empty:
         return pd.DataFrame(columns=["lender","product","emi","currency","estimated_outstanding","evidence"])
-
     def lender_token(s):
         for k in BANK_KEYWORDS:
             if k in s: return k
         return "OTHER"
-
     debits["lender"] = debits["desc_union"].apply(lender_token)
-
     rows = []
     for lender, grp in debits.groupby("lender"):
         grp = grp.sort_values("date")
@@ -139,8 +203,8 @@ def detect_external_loans(tx_df: pd.DataFrame) -> pd.DataFrame:
         product = "TERM LOAN" if monthlyish else "REVOLVING/OD?"
         outstanding = np.nan
         if monthlyish:
-            r = 0.12/12  # APR assumption
-            n = 24       # months remaining
+            r = 0.12/12
+            n = 24
             outstanding = emi * (1 - (1+r)**(-n)) / r
         evidence = f"{len(grp)} debits; median gap {gap_txt}; top debit≈{emi:,.0f}"
         rows.append({
@@ -153,10 +217,6 @@ def detect_external_loans(tx_df: pd.DataFrame) -> pd.DataFrame:
         })
     return pd.DataFrame(rows)
 
-
-# =========================================
-# Eligibility & policy math
-# =========================================
 def eligible_term_cap_from_cashflows(avg_inflow, avg_outflow, target_dscr=1.5, apr=0.12, tenor_months=24):
     ebitda_proxy = max(0.0, avg_inflow - avg_outflow)
     if ebitda_proxy <= 0:
@@ -169,7 +229,7 @@ def eligible_term_cap_from_cashflows(avg_inflow, avg_outflow, target_dscr=1.5, a
     return float(pv), {"ebitda_proxy": ebitda_proxy, "annual_service": annual_service, "monthly_service": monthly_service}
 
 def wc_limit_from_flows(avg_inflow, volatility, k_base=0.8):
-    k = max(0.4, min(0.95, k_base * (1 - volatility)))  # 40%..95% haircutted by volatility
+    k = max(0.4, min(0.95, k_base * (1 - volatility)))
     return float(k * max(0.0, avg_inflow))
 
 def compute_eligibility(ratios, of_signals, policies, tier1_capital_aed, exposure_to_obligor_aed, term_cap, wc_cap):
@@ -183,19 +243,13 @@ def compute_eligibility(ratios, of_signals, policies, tier1_capital_aed, exposur
         status = "Conditional"; reasons.append(f"Inflow volatility {ratios['Inflow_volatility']:.2f} > {policies['max_inflow_vol']:.2f}")
     if of_signals.get("bounced_txn_6m", 0) > policies["max_bounced_txn_6m"]:
         status = "Conditional"; reasons.append(f"Bounced txns {of_signals['bounced_txn_6m']} > {policies['max_bounced_txn_6m']}")
-
     single_obligor_pct = (exposure_to_obligor_aed / max(1.0, tier1_capital_aed)) * 100
     if single_obligor_pct > 25.0:
         status = "Decline"; reasons.append(f"Single obligor {single_obligor_pct:.1f}% > 25% of Tier 1")
-
     policy_cap = 0.25 * tier1_capital_aed
     max_cap = min(policy_cap, max(term_cap, wc_cap))
     return status, reasons, {"single_obligor_pct": single_obligor_pct, "policy_cap": policy_cap, "max_cap": max_cap}
 
-
-# =========================================
-# Memo builder
-# =========================================
 def build_credit_memo(borrower_name, metrics):
     md = []
     md.append(f"# Credit Proposal — {borrower_name}")
@@ -234,25 +288,42 @@ def build_credit_memo(borrower_name, metrics):
     md.append("\n---\n*This demo memo was generated automatically from Open Finance signals and simple policy rules.*")
     return "\n".join(md)
 
-
-# =========================================
+# =========================
 # Main app
-# =========================================
+# =========================
 def run_lending_assistant():
     st.title("📄 AI Lending Assistant (Open Finance + CBUAE Checklist)")
     st.caption("Automates corporate credit proposals using Open Finance signals and a rules-based checklist.")
 
-    # ---------- Controls in MAIN WINDOW ----------
-    st.markdown("### Policy Thresholds & Capacity")
-    col1, col2 = st.columns(2, vertical_alignment="top")
+    # ---- Load MBP & client selector ----
+    mbp = load_df_csv(DATA_DIR / "multi_bank_profile.csv")
+    clients = list_clients_from_mbp(mbp)
+    if not clients:
+        st.warning("No clients found in multi_bank_profile.csv. Using default demo data.")
+        selected_name, selected_id = "Al Noor Trading LLC", "TL-2020-1234567"
+    else:
+        names = [f"{n}  ({cid})" for n, cid in clients]
+        idx_default = 0
+        for i, (n, cid) in enumerate(clients):
+            if "Al Noor Trading LLC" in n:
+                idx_default = i
+                break
+        choice = st.selectbox("Select Client", names, index=idx_default)
+        selected_name, selected_id = clients[names.index(choice)]
 
+    # ---- Try to load client-specific OF files; fallback to shared demo ----
+    tx, _, acct, chk = try_load_of_files_for_client(selected_id, selected_name)
+    tx = normalize_tx(tx)
+
+    # ---- Controls in main window ----
+    st.markdown("### Policy Thresholds & Capacity")
+    col1, col2 = st.columns(2)
     with col1:
         st.markdown("**Policy Thresholds**")
         min_dscr = st.slider("Min DSCR (proxy)", 0.5, 3.0, 1.50, 0.05)
         max_leverage = st.slider("Max Leverage (Debt/EBITDA proxy)", 1.0, 6.0, 3.00, 0.1)
         max_inflow_vol = st.slider("Max Inflow Volatility (std/mean)", 0.0, 0.8, 0.20, 0.01)
         max_bounced_txn_6m = st.slider("Max Bounced Txns (6m)", 0, 6, 0, 1)
-
     with col2:
         st.markdown("**Capacity & Exposure Params**")
         tier1_capital = st.number_input("Tier 1 Capital (AED)", min_value=1_000_000.0, value=1_000_000_000.0, step=10_000_000.0, format="%.0f")
@@ -267,24 +338,21 @@ def run_lending_assistant():
         "max_bounced_txn_6m": max_bounced_txn_6m,
     }
 
-    # ---------- Load data ----------
-    tx, mb, acct, chk = load_all_data()
-    tx = normalize_tx(tx)
-
-    # ---------- Tabs ----------
+    # ---- Tabs ----
     tab1, tab2, tab3, tab4 = st.tabs(["Open Finance Snapshot", "Loan Eligibility", "CBUAE Checklist", "Credit Memo"])
 
-    # ===== Tab 1: Open Finance =====
+    # ===== Tab 1 =====
     with tab1:
-        st.subheader("Open Finance Snapshot")
+        st.subheader(f"Open Finance Snapshot — {selected_name}")
         if tx.empty:
-            st.warning("No transactions found in /data/transactions.json")
+            st.warning("No transactions available for this client. Add a client-specific file like "
+                       f"`transactions_{selected_id}.json` or `transactions_{_slug(selected_name)}.json` in /data.")
             m = pd.DataFrame(columns=["month","inflow","outflow","net"])
             loans_df = pd.DataFrame()
             avg_in = avg_out = inflow_vol = 0.0
             bounced = 0
         else:
-            m = monthly_aggregates(tx).tail(6)  # last 6 months if available
+            m = monthly_aggregates(tx).tail(6)
             avg_in = float(m["inflow"].mean()) if not m.empty else 0.0
             avg_out = float(m["outflow"].mean()) if not m.empty else 0.0
             inflow_vol = inflow_volatility(m)
@@ -295,8 +363,7 @@ def run_lending_assistant():
             c2.metric("Avg Outflow (3–6m)", f"AED {int(avg_out):,}")
             c3.metric("Net Cash Flow", f"AED {int(avg_in-avg_out):,}")
             c4.metric("Inflow Volatility", f"{inflow_vol:.2f}")
-            c5.metric("Bounced Txns (heuristic)", int(bounced))
-
+            c5.metric("Bounced Txns", int(bounced))
             st.markdown("**Monthly aggregates**")
             st.dataframe(m, use_container_width=True)
 
@@ -307,82 +374,67 @@ def run_lending_assistant():
         else:
             st.dataframe(loans_df, use_container_width=True)
 
-        # keep for next tabs
         st.session_state["avg_in"] = avg_in
         st.session_state["avg_out"] = avg_out
         st.session_state["inflow_vol"] = inflow_vol
         st.session_state["bounced"] = int(bounced)
         st.session_state["loans_df"] = loans_df
+        st.session_state["selected_client_name"] = selected_name
 
-    # ===== Tab 2: Eligibility =====
+    # ===== Tab 2 =====
     with tab2:
         st.subheader("Loan Eligibility (Policy & Exposure)")
-
         avg_in = st.session_state.get("avg_in", 0.0)
         avg_out = st.session_state.get("avg_out", 0.0)
         inflow_vol = st.session_state.get("inflow_vol", 0.0)
         bounced = st.session_state.get("bounced", 0)
         loans_df = st.session_state.get("loans_df", pd.DataFrame())
-
         ext_outstanding = float(loans_df["estimated_outstanding"].fillna(0).sum()) if not loans_df.empty else 0.0
         ext_monthly_emi = float(loans_df["emi"].fillna(0).sum()) if not loans_df.empty else 0.0
-
         ebitda_proxy = max(0.0, avg_in - avg_out)
-        denom = max(1.0, ext_monthly_emi)  # monthly obligation proxy
+        denom = max(1.0, ext_monthly_emi)
         dscr_proxy = (ebitda_proxy / 12.0) / denom
         leverage_proxy = (ext_outstanding + internal_utilized) / max(1.0, ebitda_proxy)
-
-        ratios = {
-            "DSCR_proxy": dscr_proxy,
-            "Leverage_proxy": leverage_proxy,
-            "Inflow_volatility": inflow_vol
-        }
+        ratios = {"DSCR_proxy": dscr_proxy, "Leverage_proxy": leverage_proxy, "Inflow_volatility": inflow_vol}
         of_signals = {"bounced_txn_6m": bounced}
-
         term_cap, _ = eligible_term_cap_from_cashflows(avg_in, avg_out, target_dscr=policies["min_dscr"], apr=apr, tenor_months=tenor_months)
         wc_cap = wc_limit_from_flows(avg_in, inflow_vol)
-
         exposure_to_obligor = internal_utilized + ext_outstanding
-
-        status, reasons, meta = compute_eligibility(
-            ratios, of_signals, policies, tier1_capital, exposure_to_obligor, term_cap, wc_cap
-        )
+        status, reasons, meta = compute_eligibility(ratios, of_signals, policies, 1.0 * tier1_capital, exposure_to_obligor, term_cap, wc_cap)
         eligible_new = max(0.0, meta["max_cap"] - exposure_to_obligor)
-
         if status == "Eligible":
             st.success("Eligible")
         elif status == "Conditional":
             st.warning("Conditional – address the items below")
         else:
             st.error("Decline – key policy/exposure breach")
-
         st.write("**Reasons:**")
         if reasons:
-            for r in reasons:
-                st.write("- " + r)
+            for r in reasons: st.write("- " + r)
         else:
             st.write("- All core checks passed")
-
         st.metric("Eligible Amount (AED)", f"{int(eligible_new):,}")
         st.caption(f"Term cap≈ {int(term_cap):,} | WC cap≈ {int(wc_cap):,} | Policy cap (25% Tier1)≈ {int(meta['policy_cap']):,}")
         st.caption(f"External outstanding≈ {int(ext_outstanding):,} | Internal utilized≈ {int(internal_utilized):,}")
         st.caption(f"Single obligor (demo): {meta['single_obligor_pct']:.1f}% of Tier 1")
-
         st.session_state["elig_status"] = status
         st.session_state["elig_reasons"] = reasons
         st.session_state["eligible_new"] = eligible_new
         st.session_state["policy_cap"] = meta["policy_cap"]
 
-    # ===== Tab 3: Checklist =====
+    # ===== Tab 3 =====
     with tab3:
         st.subheader("Compliance Checklist (CBUAE)")
-
-        chk_path = DATA_DIR / "CBUAE_Corporate_Lending_Checklist.csv"
-        chk = load_df_csv(chk_path)
-
+        csv_path = DATA_DIR / "CBUAE_Corporate_Lending_Checklist.csv"
+        exists = file_exists(csv_path)
+        chk = load_df_csv(csv_path)
+        if not exists:
+            st.info(f"Checklist CSV not found at: {csv_path}")
+        elif chk.empty:
+            st.info(f"Checklist CSV found at {csv_path} but could not be parsed (column mismatch). "
+                    f"Please use the corrected CSV format below.")
+        # Minimal fallback so the page still works
         if chk.empty:
-            st.info("Checklist CSV not found at: " + str(chk_path))
-            # graceful, minimal fallback so the page still works
             chk = pd.DataFrame([
                 {"Section":"Underwriting & Assessment","Control":"Cashflow/DSCR","Requirement":"Verified DSCR > policy",
                  "Evidence Examples":"Model; DSCR sheet","Frequency":"Per-transaction","Control Owner":"Credit",
@@ -391,45 +443,39 @@ def run_lending_assistant():
                  "Evidence Examples":"Limit calc; Tier 1","Frequency":"Per-transaction","Control Owner":"Risk",
                  "Automated (Y/N)":"Y","System Field ID (suggested)":"exp.single_obligor_pct"}
             ])
-
-        # auto-checks from metrics
         status = st.session_state.get("elig_status", "Eligible")
-        reasons = st.session_state.get("elig_reasons", [])
         eligible_new = st.session_state.get("eligible_new", 0.0)
         policy_cap = st.session_state.get("policy_cap", 0.0)
-
-        # Use prior ratios if available, else neutral defaults
-        dscr_proxy = st.session_state.get("avg_in", 0.0) - st.session_state.get("avg_out", 0.0)
         try:
-            dscr_ok = ( ( (st.session_state.get("avg_in", 0.0) - st.session_state.get("avg_out", 0.0)) / 12.0 )
-                        / max(1.0, float(st.session_state.get("loans_df", pd.DataFrame())["emi"].fillna(0).sum())) ) >= policies["min_dscr"]
+            ext_emi = float(st.session_state.get("loans_df", pd.DataFrame())["emi"].fillna(0).sum())
+        except Exception:
+            ext_emi = 0.0
+        try:
+            dscr_ok = (((st.session_state.get("avg_in", 0.0) - st.session_state.get("avg_out", 0.0)) / 12.0)
+                       / max(1.0, ext_emi)) >= policies["min_dscr"]
         except Exception:
             dscr_ok = False
-
         auto_map = {
             "uw.dscr_value": (status != "Decline") and dscr_ok,
             "exp.single_obligor_pct": (status != "Decline") and (policy_cap >= 0) and (eligible_new >= 0),
-            "ls.ltv_ratio": False,  # collateral not modeled yet
+            "ls.ltv_ratio": False,
         }
-
         completed = 0
         total = len(chk)
         for _, row in chk.iterrows():
             fid = str(row.get("System Field ID (suggested)", ""))
             auto_flag = auto_map.get(fid, None)
-            label = f"{row['Section']} – {row['Control']}: {row['Requirement']}"
-            default_value = bool(auto_flag) if auto_flag is not None else False
-            value = st.checkbox(label, value=default_value, key=fid)
+            label = f"{row.get('Section','')} – {row.get('Control','')}: {row.get('Requirement','')}"
+            value = st.checkbox(label, value=bool(auto_flag) if auto_flag is not None else False, key=f"chk_{fid}_{_}")
             st.caption(f"Evidence: {row.get('Evidence Examples','')} • Owner: {row.get('Control Owner','')} • Freq: {row.get('Frequency','')}")
             if value: completed += 1
-
         st.success(f"Checklist completion: {completed}/{total}")
 
-    # ===== Tab 4: Memo =====
+    # ===== Tab 4 =====
     with tab4:
         st.subheader("Auto-Generated Credit Memo")
         memo = build_credit_memo(
-            borrower_name="Al Noor Trading LLC",
+            borrower_name=st.session_state.get("selected_client_name", "Selected Client"),
             metrics={
                 "avg_inflow": st.session_state.get("avg_in", 0.0),
                 "avg_outflow": st.session_state.get("avg_out", 0.0),
@@ -444,9 +490,5 @@ def run_lending_assistant():
             }
         )
         st.markdown(memo)
-        st.download_button(
-            "⬇️ Download Memo (.md)",
-            data=memo.encode("utf-8"),
-            file_name="credit_memo_demo.md",
-            mime="text/markdown"
-        )
+        st.download_button("⬇️ Download Memo (.md)", data=memo.encode("utf-8"),
+                           file_name="credit_memo_demo.md", mime="text/markdown")
