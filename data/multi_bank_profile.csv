@@ -1,47 +1,23 @@
-UAE ID,Client Name,Bank,Products Used
-784-1234-567890-1,Fatima Al Mansouri,Emirates NBD,Auto Loan
-784-1234-567890-1,Fatima Al Mansouri,Emirates NBD,Current Account
-784-1234-567890-1,Fatima Al Mansouri,Emirates NBD,Investment Account
-784-1234-567890-1,Fatima Al Mansouri,Emirates NBD,Personal Loan
-784-1234-567890-1,Fatima Al Mansouri,First Abu Dhabi Bank,Current Account
-784-1234-567890-1,Fatima Al Mansouri,First Abu Dhabi Bank,Credit Card
-784-1234-567890-1,Fatima Al Mansouri,First Abu Dhabi Bank,Insurance Plan
-784-1234-567890-1,Fatima Al Mansouri,First Abu Dhabi Bank,Savings Account
-784-1234-567890-1,Fatima Al Mansouri,Mashreq Bank,Savings Account
-784-1234-567890-1,Fatima Al Mansouri,Mashreq Bank,Current Account
-784-1234-567890-1,Fatima Al Mansouri,Mashreq Bank,Personal Loan
-784-1234-567890-1,Fatima Al Mansouri,Abu Dhabi Commercial Bank,Insurance Plan
-784-1234-567890-1,Fatima Al Mansouri,Abu Dhabi Commercial Bank,Current Account
-784-9876-543210-2,Omar Al Fardan,Emirates NBD,Investment Account
-784-9876-543210-2,Omar Al Fardan,Emirates NBD,Credit Card
-784-9876-543210-2,Omar Al Fardan,Emirates NBD,Insurance Plan
-784-9876-543210-2,Omar Al Fardan,First Abu Dhabi Bank,Current Account
-784-9876-543210-2,Omar Al Fardan,First Abu Dhabi Bank,Credit Card
-784-9876-543210-2,Omar Al Fardan,First Abu Dhabi Bank,Auto Loan
-784-9876-543210-2,Omar Al Fardan,Mashreq Bank,Investment Account
-784-9876-543210-2,Omar Al Fardan,Mashreq Bank,Personal Loan
-784-9876-543210-2,Omar Al Fardan,Mashreq Bank,Current Account
-784-9876-543210-2,Omar Al Fardan,Abu Dhabi Commercial Bank,Credit Card
-784-9876-543210-2,Omar Al Fardan,Abu Dhabi Commercial Bank,Current Account
-784-2468-135790-3,Salim Khan,Emirates NBD,Savings Account
-784-2468-135790-3,Salim Khan,Emirates NBD,Personal Loan
-784-2468-135790-3,Salim Khan,Emirates NBD,Salary Account
-784-2468-135790-3,Salim Khan,Emirates NBD,Investment Account
-784-2468-135790-3,Salim Khan,First Abu Dhabi Bank,Personal Loan
-784-2468-135790-3,Salim Khan,Mashreq Bank,Auto Loan
-784-2468-135790-3,Salim Khan,Mashreq Bank,Insurance Plan
-784-2468-135790-3,Salim Khan,Abu Dhabi Commercial Bank,Current Account
-784-2468-135790-3,Salim Khan,Abu Dhabi Commercial Bank,Savings Account
-784-2468-135790-3,Salim Khan,Abu Dhabi Commercial Bank,Personal Loan
-784-3698-147025-4,Laila Hassan,Emirates NBD,Auto Loan
-784-3698-147025-4,Laila Hassan,Emirates NBD,Current Account
-784-3698-147025-4,Laila Hassan,First Abu Dhabi Bank,Investment Account
-784-3698-147025-4,Laila Hassan,First Abu Dhabi Bank,Current Account
-784-3698-147025-4,Laila Hassan,First Abu Dhabi Bank,Auto Loan
-784-3698-147025-4,Laila Hassan,First Abu Dhabi Bank,Personal Loan
-784-3698-147025-4,Laila Hassan,Mashreq Bank,Investment Account
-784-3698-147025-4,Laila Hassan,Mashreq Bank,Personal Loan
-784-3698-147025-4,Laila Hassan,Mashreq Bank,Credit Card
-784-3698-147025-4,Laila Hassan,Mashreq Bank,Salary Account
-784-3698-147025-4,Laila Hassan,Abu Dhabi Commercial Bank,Investment Account
-784-3698-147025-4,Laila Hassan,Abu Dhabi Commercial Bank,Insurance Plan
+UAE ID,Client Name,Bank,Products Used,IBAN Masked,Primary,Avg Balance 6m (AED),Overdraft Limit (AED),Overdraft Utilization %,Loans Outstanding Est (AED),Relationship Since
+TL-2020-1234567,Al Noor Trading LLC,Emirates NBD,Current Account,AE12****3456,TRUE,680000,0,0,0,2018-05-01
+TL-2020-1234567,Al Noor Trading LLC,Emirates NBD,LC Line,,TRUE,,3500000,31,0,2019-02-10
+TL-2020-1234567,Al Noor Trading LLC,First Abu Dhabi Bank,Overdraft,AE47****9012,FALSE,420000,2000000,48,0,2020-07-15
+TL-2020-1234567,Al Noor Trading LLC,First Abu Dhabi Bank,Term Loan,,FALSE,,,0,2400000,2023-03-20
+TL-2020-1234567,Al Noor Trading LLC,Mashreq,Current Account,AE22****6543,FALSE,1150000,0,0,0,2017-11-03
+TL-2019-5566778,Desert Solar FZE,FAB,Current Account,AE88****1122,TRUE,390000,0,0,0,2020-04-22
+TL-2019-5566778,Desert Solar FZE,FAB,Project Guarantee/BG,,TRUE,,,0,0,2021-01-12
+TL-2019-5566778,Desert Solar FZE,NBK UAE,Term Loan,,FALSE,,,0,1800000,2022-06-30
+TL-2019-5566778,Desert Solar FZE,NBK UAE,Current Account,AE33****7890,FALSE,260000,0,0,0,2022-06-30
+TL-2012-9988776,Gulf Logistics PJSC,Mashreq,Overdraft,AE55****2211,TRUE,1450000,4000000,55,0,2015-09-18
+TL-2012-9988776,Gulf Logistics PJSC,Mashreq,Term Loan,,TRUE,,,0,6100000,2019-12-05
+TL-2012-9988776,Gulf Logistics PJSC,RAKBANK,Current Account,AE12****9087,FALSE,510000,0,0,0,2016-02-14
+TL-2017-4455663,Oasis Foods LLC,ADCB,Current Account,AE77****3344,TRUE,520000,0,0,0,2018-08-09
+TL-2017-4455663,Oasis Foods LLC,ADCB,Overdraft,,TRUE,,1500000,41,0,2019-01-25
+TL-2017-4455663,Oasis Foods LLC,Emirates NBD,FX Facility,,FALSE,,,0,0,2020-10-02
+TL-2021-1122334,Marina Tech FZ-LLC,HSBC,Current Account,AE66****5566,TRUE,310000,0,0,0,2021-05-11
+TL-2021-1122334,Marina Tech FZ-LLC,HSBC,Term Loan,,TRUE,,,0,900000,2023-04-01
+TL-2021-1122334,Marina Tech FZ-LLC,Standard Chartered,Payroll/WPS,,FALSE,,,0,0,2022-02-20
+TL-2015-1010101,Blue Dunes Contracting LLC,FAB,Current Account,AE47****4411,TRUE,840000,0,0,0,2016-03-29
+TL-2015-1010101,Blue Dunes Contracting LLC,FAB,Guarantee/BG,,TRUE,,,0,0,2018-07-17
+TL-2015-1010101,Blue Dunes Contracting LLC,Emirates NBD,Overdraft,AE12****7722,FALSE,620000,2500000,38,0,2019-05-23
+TL-2015-1010101,Blue Dunes Contracting LLC,Emirates NBD,Term Loan,,FALSE,,,0,3200000,2022-09-10
