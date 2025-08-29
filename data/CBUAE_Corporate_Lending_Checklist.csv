@@ -1,35 +1,35 @@
-Section,Control,Requirement,Evidence Examples,Frequency,Control Owner,Automated (Y/N),System Field ID (suggested)
-Governance & Oversight,Board Policy,Board-approved Credit Risk Policy (corp/commercial lending),Board minutes; signed policy; version control,Annual,Board/Risk,N,gov.policy_credit_risk
-Governance & Oversight,Risk Appetite,Documented risk appetite & exposure limits (counterparty/sector/geo),Risk Appetite Statement; limit registers,Annual,Risk,N,gov.ras_limits
-Governance & Oversight,Material Approvals,Board approval for material facilities (≥10% Tier 1 or internal threshold),Approval memo; Board resolution,Per-event,Board,N,gov.material_approval
-Governance & Oversight,Board Attestation,Annual attestation on compliance with CBUAE lending regulations,Signed attestation; compliance report,Annual,Board/Compliance,N,gov.annual_attestation
-Underwriting & Assessment,Financials,Audited financials & management accounts obtained,Audited FS; Mgmt accounts; auditor confirmation,Per-transaction,RM/Credit,N,uw.financials_received
-Underwriting & Assessment,Cashflow/DSCR,Verified cash-flow forecast; DSCR > 1x (policy threshold editable),Model; assumptions; DSCR worksheet,Per-transaction,Credit,Y,uw.dscr_value
-Underwriting & Assessment,Purpose & Rationale,Documented purpose of borrowing & economic rationale,Application form; use-of-funds memo,Per-transaction,RM,N,uw.purpose_text
-Underwriting & Assessment,Collateral Valuation,Independent valuation; supervisory haircuts applied,Valuation report; valuer credentials; haircut calc,Per-transaction,Credit/Collateral,N,uw.collateral_valuation
-Underwriting & Assessment,KYC/UBO,KYC/UBO docs; group structure mapping,CDD pack; org charts; UBO registry,Onboarding/Refresh,Compliance,N,uw.kyc_complete
-Underwriting & Assessment,Related Parties,Assessment of related-party connections,Shareholder register; affiliate mapping; declarations,Per-transaction,Compliance/Risk,N,uw.related_party_map
-Loan Structuring,Facility Terms,Agreement covers tenor, pricing, covenants, repayment schedule,Executed facility agreement; term sheet,Per-transaction,Legal/RM,N,ls.facility_terms_ok
-Loan Structuring,Security Package,Security perfected; enforceability checked,Mortgage/pledge docs; perfection evidence,Per-transaction,Legal/Collateral,N,ls.security_perfected
-Loan Structuring,Insurance,Insurance in place for pledged collateral (if applicable),Policy; endorsement; broker letter,Per-transaction,Borrower/Collateral,N,ls.insurance_in_place
-Loan Structuring,LTV Policy,LTV set per policy,LTV worksheet; approval,Per-transaction,Credit,Y,ls.ltv_ratio
-Loan Structuring,Stress Testing,IR/liquidity/FX stress performed,Stress model; results; sign-off,Per-transaction,Risk/Credit,Y,ls.stress_results
-Exposure & Concentration,Single Obligor,Single counterparty/group ≤ 25% Tier 1,Limit calc; Tier 1 evidence; group mapping,Per-transaction & Daily,Risk/Treasury,Y,exp.single_obligor_pct
-Exposure & Concentration,Non-UAE Banks,Exposure to non-UAE banks ≤ 30% of capital base,Exposure report; capital base calc,Daily/Monthly,Risk/Treasury,Y,exp.non_uae_banks_pct
-Exposure & Concentration,UAE GRC Entities,Aggregate exposure to UAE government-owned commercial entities ≤ 100%,Portfolio exposure report; flagging,Monthly,Risk,Y,exp.uae_gov_commercial_pct
-Exposure & Concentration,Related Parties - Shareholders,Shareholders ≥5%: ≤ 20% individual / ≤ 50% aggregate,Exposure-by-owner report,Monthly,Risk/Compliance,Y,exp.rp_shareholders_pct
-Exposure & Concentration,Related Parties - Subs/Affiliates,Non-bank subs/affiliates: ≤ 10% individual / ≤ 25% aggregate,Exposure-by-affiliate report,Monthly,Risk/Compliance,Y,exp.rp_affiliates_pct
-Exposure & Concentration,Related Parties - Board,Board members: ≤ 5% individual / ≤ 25% aggregate,Exposure-by-board report,Monthly,Risk/Compliance,Y,exp.rp_board_pct
-Exposure & Concentration,Related Parties - Auditors,External auditors: Prohibited,Counterparty check list,Per-transaction,Compliance,Y,exp.rp_auditor_check
-Classification & Provisioning,IFRS 9 Staging,Loans staged (1/2/3) with SICR triggers,Staging engines; trigger logs,Monthly,Finance/Risk,Y,prov.ifrs9_stage
-Classification & Provisioning,Minimum Provisions,Circular 28/2010 minimums (Levels 1–5),Provisioning calc; policy ref,Monthly,Finance,Y,prov.c28_min_levels
-Classification & Provisioning,Restructuring Docs,Rationale documented for restructured/reclassified,Restructuring memo; approvals,Per-event,Credit/Legal,N,prov.restructure_rationale
-Classification & Provisioning,Collateral Haircuts,Supervisory haircuts applied,Haircut tables; model output,Monthly,Risk/Finance,Y,prov.haircut_applied
-Ongoing Monitoring,Continuous Monitoring,Monitor borrower condition & indebtedness,Bureau pulls; covenant tracker; OF refresh,Monthly/Quarterly,RM/Risk,Y,mon.continuous_monitoring
-Ongoing Monitoring,Early Warnings,Track EWI (breaches, downgrades),Alerts; logs; committee notes,Daily/Monthly,Risk,Y,mon.ewi_status
-Ongoing Monitoring,Watch-list / Problem Assets,Framework in place,Watch-list policy; meeting minutes,Monthly,Risk/Credit,N,mon.watchlist_framework
-Ongoing Monitoring,Annual Review,Annual credit review & re-approval (material facilities),Review pack; approvals,Annual,RM/Credit,N,mon.annual_review_done
-Ongoing Monitoring,Stress Refresh,Stress scenarios refreshed ≥ annually,Stress model rerun; report,Annual,Risk,Y,mon.stress_refresh_date
-Transparency & Reporting,Client Disclosures,All fees/charges/APR or profit rates disclosed,Disclosure form; signed acknowledgment,Per-transaction,RM/Compliance,N,rep.client_disclosure_ack
-Transparency & Reporting,MIS to Board/Risk,MIS on sector/counterparty mix; related parties; NPL & provisioning,Board packs; dashboards,Monthly/Quarterly,Risk/Finance,Y,rep.board_mis_sent
-Transparency & Reporting,Regulatory Filings,Timely submissions to CBUAE,CBUAE portal receipts; logs,Per return,Compliance/Finance,N,rep.cbuae_filing_log
+"Section","Control","Requirement","Evidence Examples","Frequency","Control Owner","Automated (Y/N)","System Field ID (suggested)"
+"Governance & Oversight","Board Policy","Board-approved Credit Risk Policy (corp/commercial lending)","Board minutes; signed policy; version control","Annual","Board/Risk","N","gov.policy_credit_risk"
+"Governance & Oversight","Risk Appetite","Documented risk appetite & exposure limits (counterparty/sector/geo)","Risk Appetite Statement; limit registers","Annual","Risk","N","gov.ras_limits"
+"Governance & Oversight","Material Approvals","Board approval for material facilities (≥10% Tier 1 or internal threshold)","Approval memo; Board resolution","Per-event","Board","N","gov.material_approval"
+"Governance & Oversight","Board Attestation","Annual attestation on compliance with CBUAE lending regulations","Signed attestation; compliance report","Annual","Board/Compliance","N","gov.annual_attestation"
+"Underwriting & Assessment","Financials","Audited financials & management accounts obtained","Audited FS; Mgmt accounts; auditor confirmation","Per-transaction","RM/Credit","N","uw.financials_received"
+"Underwriting & Assessment","Cashflow/DSCR","Verified cash-flow forecast; DSCR > 1x (policy threshold editable)","Model; DSCR worksheet","Per-transaction","Credit","Y","uw.dscr_value"
+"Underwriting & Assessment","Purpose & Rationale","Documented purpose of borrowing & economic rationale","Application form; use-of-funds memo","Per-transaction","RM","N","uw.purpose_text"
+"Underwriting & Assessment","Collateral Valuation","Independent valuation; supervisory haircuts applied","Valuation report; valuer credentials; haircut calc","Per-transaction","Credit/Collateral","N","uw.collateral_valuation"
+"Underwriting & Assessment","KYC/UBO","KYC/UBO docs; group structure mapping","CDD pack; org charts; UBO registry","Onboarding/Refresh","Compliance","N","uw.kyc_complete"
+"Underwriting & Assessment","Related Parties","Assessment of related-party connections","Shareholder register; affiliate mapping; declarations","Per-transaction","Compliance/Risk","N","uw.related_party_map"
+"Loan Structuring","Facility Terms","Agreement covers tenor, pricing, covenants, repayment schedule","Executed facility agreement; term sheet","Per-transaction","Legal/RM","N","ls.facility_terms_ok"
+"Loan Structuring","Security Package","Security perfected; enforceability checked","Mortgage/pledge docs; perfection evidence","Per-transaction","Legal/Collateral","N","ls.security_perfected"
+"Loan Structuring","Insurance","Insurance in place for pledged collateral (if applicable)","Policy; endorsement; broker letter","Per-transaction","Borrower/Collateral","N","ls.insurance_in_place"
+"Loan Structuring","LTV Policy","LTV set per policy","LTV worksheet; approval","Per-transaction","Credit","Y","ls.ltv_ratio"
+"Loan Structuring","Stress Testing","IR/liquidity/FX stress performed","Stress model; results; sign-off","Per-transaction","Risk/Credit","Y","ls.stress_results"
+"Exposure & Concentration","Single Obligor","Single counterparty/group ≤ 25% Tier 1","Limit calc; Tier 1 evidence; group mapping","Per-transaction & Daily","Risk/Treasury","Y","exp.single_obligor_pct"
+"Exposure & Concentration","Non-UAE Banks","Exposure to non-UAE banks ≤ 30% of capital base","Exposure report; capital base calc","Daily/Monthly","Risk/Treasury","Y","exp.non_uae_banks_pct"
+"Exposure & Concentration","UAE GRC Entities","Aggregate exposure to UAE government-owned commercial entities ≤ 100%","Portfolio exposure report; flagging","Monthly","Risk","Y","exp.uae_gov_commercial_pct"
+"Exposure & Concentration","Related Parties - Shareholders","Shareholders ≥5%: ≤ 20% individual / ≤ 50% aggregate","Exposure-by-owner report","Monthly","Risk/Compliance","Y","exp.rp_shareholders_pct"
+"Exposure & Concentration","Related Parties - Subs/Affiliates","Non-bank subsidiaries/affiliates: ≤ 10% individual / ≤ 25% aggregate","Exposure-by-affiliate report","Monthly","Risk/Compliance","Y","exp.rp_affiliates_pct"
+"Exposure & Concentration","Related Parties - Board","Board members: ≤ 5% individual / ≤ 25% aggregate","Exposure-by-board report","Monthly","Risk/Compliance","Y","exp.rp_board_pct"
+"Exposure & Concentration","Related Parties - Auditors","External auditors: Prohibited","Counterparty check list","Per-transaction","Compliance","Y","exp.rp_auditor_check"
+"Classification & Provisioning","IFRS 9 Staging","Loans staged (1/2/3) with SICR triggers","Staging engines; trigger logs","Monthly","Finance/Risk","Y","prov.ifrs9_stage"
+"Classification & Provisioning","Minimum Provisions","Circular 28/2010 minimums (Levels 1–5)","Provisioning calc; policy ref","Monthly","Finance","Y","prov.c28_min_levels"
+"Classification & Provisioning","Restructuring Docs","Rationale documented for restructured/reclassified","Restructuring memo; approvals","Per-event","Credit/Legal","N","prov.restructure_rationale"
+"Classification & Provisioning","Collateral Haircuts","Supervisory haircuts applied","Haircut tables; model output","Monthly","Risk/Finance","Y","prov.haircut_applied"
+"Ongoing Monitoring","Continuous Monitoring","Monitor borrower condition & indebtedness","Bureau pulls; covenant tracker; OF refresh","Monthly/Quarterly","RM/Risk","Y","mon.continuous_monitoring"
+"Ongoing Monitoring","Early Warnings","Track EWI (breaches, downgrades)","Alerts; logs; committee notes","Daily/Monthly","Risk","Y","mon.ewi_status"
+"Ongoing Monitoring","Watch-list / Problem Assets","Framework in place","Watch-list policy; meeting minutes","Monthly","Risk/Credit","N","mon.watchlist_framework"
+"Ongoing Monitoring","Annual Review","Annual credit review & re-approval (material facilities)","Review pack; approvals","Annual","RM/Credit","N","mon.annual_review_done"
+"Ongoing Monitoring","Stress Refresh","Stress scenarios refreshed ≥ annually","Stress model rerun; report","Annual","Risk","Y","mon.stress_refresh_date"
+"Transparency & Reporting","Client Disclosures","All fees/charges/APR or profit rates disclosed","Disclosure form; signed acknowledgment","Per-transaction","RM/Compliance","N","rep.client_disclosure_ack"
+"Transparency & Reporting","MIS to Board/Risk","MIS on sector/counterparty mix; related parties; NPL & provisioning","Board packs; dashboards","Monthly/Quarterly","Risk/Finance","Y","rep.board_mis_sent"
+"Transparency & Reporting","Regulatory Filings","Timely submissions to CBUAE","CBUAE portal receipts; logs","Per return","Compliance/Finance","N","rep.cbuae_filing_log"
