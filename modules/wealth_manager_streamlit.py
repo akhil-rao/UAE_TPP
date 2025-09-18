@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 def run_wealth_copilot():
-    st.title("🧠 Wealth Manager Copilot")
+    st.title(" Wealth Manager Copilot")
 
     # Realistic clients
     clients = [
